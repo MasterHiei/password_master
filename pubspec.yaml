@@ -10,9 +10,10 @@ environment:
 
 dependencies:
   animated_text_kit: 4.2.2
+  auto_route: 7.8.4
   cupertino_icons: 1.0.6
   dartx: 1.2.0
-  easy_localization: 3.0.4
+  easy_localization: 3.0.5
   flutter:
     sdk: flutter
   flutter_riverpod: 2.4.10
@@ -25,6 +26,7 @@ dependencies:
   riverpod_annotation: 2.3.4
 
 dev_dependencies:
+  auto_route_generator: 7.3.2
   build_runner: 2.4.8
   custom_lint: 0.6.2
   flutter_gen_runner: 5.4.0
