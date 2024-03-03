@@ -39,5 +39,20 @@ dev_dependencies:
   riverpod_generator: 2.3.11
   riverpod_lint: 2.3.9
 
+flutter_gen:
+  output: lib/core/gen
+
+  assets:
+    enabled: true
+    outputs:
+      class_name: Assets
+      package_parameter_enabled: false
+      style: dot-delimiter
+    exclude:
+      - assets/i18n/*
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/i18n/
