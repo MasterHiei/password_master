@@ -2,5 +2,8 @@
   "name": "English",
   "app": {
     "title": "Password Master"
+  },
+  "toast": {
+    "copied": "Copied successfully"
   }
 }

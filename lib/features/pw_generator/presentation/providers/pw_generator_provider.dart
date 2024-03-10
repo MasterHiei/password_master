@@ -8,11 +8,26 @@ import '../../../../core/enums/pw_pattern.dart';
 part 'pw_generator_provider.g.dart';
 
 @riverpod
-String pwGenerator(PwGeneratorRef ref) {
-  final Random rand = Random();
-  String random(String source) => source[rand.nextInt(source.length)];
-
+String pwGenerator(PwGeneratorRef ref, {int? seed}) {
+  final Random rand = Random.secure();
   String password = '';
+
+  String random(String source) {
+    final String value = source[rand.nextInt(source.length)];
+
+    if (password.isEmpty) {
+      return value;
+    }
+
+    // Avoid using the same character consecutively
+    final String prevChar = password.substring(password.length - 1);
+    if (value != prevChar) {
+      return value;
+    }
+
+    return random(source);
+  }
+
   for (int i = 0; i < PwSettings.maxLength; i++) {
     // Avoid using number or symbol as the first character
     final List<PwPattern> patterns = switch (i) {

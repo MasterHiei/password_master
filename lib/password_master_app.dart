@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,7 +13,12 @@ class PasswordMasterApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
-      routerConfig: ref.read(routerProvider).config(),
+      routerConfig: ref.read(routerProvider).config(
+            navigatorObservers: () => <NavigatorObserver>[
+              BotToastNavigatorObserver(),
+            ],
+          ),
+      builder: BotToastInit(),
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       locale: context.locale,
