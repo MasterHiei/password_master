@@ -1,4 +1,4 @@
-# password_master
+# Password Master
 
 A new Flutter project.
 
