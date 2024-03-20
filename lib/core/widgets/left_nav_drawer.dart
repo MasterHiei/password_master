@@ -59,7 +59,7 @@ class LeftNavDrawer extends StatelessWidget {
     ];
     return ListView.builder(
       padding: EdgeInsets.symmetric(horizontal: _outerHorizontalPadding),
-      itemBuilder: (BuildContext context, int index) => items[index],
+      itemBuilder: (_, int index) => items[index],
       itemCount: items.length,
     );
   }
