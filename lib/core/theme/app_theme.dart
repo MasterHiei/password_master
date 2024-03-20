@@ -4,7 +4,7 @@ extension type AppTheme(ThemeData _) implements ThemeData {
   static ThemeData get light => ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
-        colorSchemeSeed: const Color(0xFFF9813A),
+        colorSchemeSeed: const Color(0xFFC6D1F1),
       );
 
   static ThemeData get dark => ThemeData(
