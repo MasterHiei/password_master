@@ -4,37 +4,64 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../generated/locale_keys.g.dart';
 
+double get _outerHorizontalPadding => 8.w;
+
+double get _innerHorizontalPadding => 12.w;
+
 class LeftNavDrawer extends StatelessWidget {
   const LeftNavDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> items = _buildDrawerItems(context);
     return Drawer(
-      child: ListView.builder(
-        padding: EdgeInsets.only(
-          top: ScreenUtil().statusBarHeight,
-          bottom: ScreenUtil().bottomBarHeight,
+      child: Padding(
+        padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildHeader(context),
+            Expanded(child: _buildBody(context)),
+          ],
         ),
-        itemBuilder: (BuildContext context, int index) => items[index],
-        itemCount: items.length,
       ),
     );
   }
 
-  List<Widget> _buildDrawerItems(BuildContext context) {
-    return <Widget>[
-      ListTile(
-        title: Text(
+  Widget _buildHeader(BuildContext context) => Container(
+        alignment: Alignment.centerLeft,
+        height: kToolbarHeight,
+        padding: EdgeInsets.symmetric(
+          horizontal: _outerHorizontalPadding + _innerHorizontalPadding,
+        ),
+        child: Text(
           LocaleKeys.app_title,
-          style: TextStyle(fontSize: 16.sp),
+          style: TextStyle(
+            fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+          ),
         ).tr(context: context),
+      );
+
+  Widget _buildBody(BuildContext context) {
+    final List<Widget> items = <Widget>[
+      _LeftNavDrawerItem(
+        icon: Icons.school_outlined,
+        title: LocaleKeys.drawer_intro.tr(context: context),
+      ),
+      Divider(
+        height: 8.h,
+        indent: _innerHorizontalPadding,
+        endIndent: _innerHorizontalPadding,
       ),
       _LeftNavDrawerItem(
         icon: Icons.settings_outlined,
         title: LocaleKeys.drawer_settings.tr(context: context),
       ),
     ];
+    return ListView.builder(
+      padding: EdgeInsets.symmetric(horizontal: _outerHorizontalPadding),
+      itemBuilder: (BuildContext context, int index) => items[index],
+      itemCount: items.length,
+    );
   }
 }
 
@@ -49,16 +76,26 @@ class _LeftNavDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Row(
-        children: <Widget>[
-          Icon(icon, size: 16.sp),
-          const SizedBox(width: 8),
-          Text(
-            title,
-            style: TextStyle(fontSize: 14.sp),
-          ),
-        ],
+    const double height = 44;
+    return InkWell(
+      customBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular((height / 2).r),
+      ),
+      child: Container(
+        height: height.h,
+        padding: EdgeInsets.symmetric(
+          horizontal: _innerHorizontalPadding,
+        ),
+        child: Row(
+          children: <Widget>[
+            Icon(icon, size: 16.sp),
+            SizedBox(width: _innerHorizontalPadding),
+            Text(
+              title,
+              style: TextStyle(fontSize: 14.sp),
+            ),
+          ],
+        ),
       ),
       onTap: () {},
     );

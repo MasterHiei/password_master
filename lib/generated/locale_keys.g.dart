@@ -6,6 +6,7 @@ abstract class  LocaleKeys {
   static const app = 'app';
   static const toast_copied = 'toast.copied';
   static const toast = 'toast';
+  static const drawer_intro = 'drawer.intro';
   static const drawer_settings = 'drawer.settings';
   static const drawer = 'drawer';
 
