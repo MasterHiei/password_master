@@ -49,5 +49,12 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.dart": "${capture}.freezed.dart, ${capture}.g.dart, ${capture}.gr.dart"
-  }
+  },
+  "cSpell.words": [
+    "cupertino",
+    "dartx",
+    "fpdart",
+    "riverpod",
+    "screenutil"
+  ]
 }

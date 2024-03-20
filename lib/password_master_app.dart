@@ -36,7 +36,6 @@ class PasswordMasterApp extends ConsumerWidget {
         supportedLocales: I18n.locales,
         debugShowCheckedModeBanner: false,
       ),
-      debugShowFloatingThemeButton: true,
     );
   }
 }
