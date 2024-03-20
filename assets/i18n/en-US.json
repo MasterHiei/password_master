@@ -5,5 +5,8 @@
   },
   "toast": {
     "copied": "Copied successfully"
+  },
+  "drawer": {
+    "settings": "Settings"
   }
 }
