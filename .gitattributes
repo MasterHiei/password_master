@@ -1,3 +1,5 @@
+* text=auto eol=lf
+
 *.freezed.dart linguist-generated=true
 *.g.dart linguist-generated=true
 *.gr.dart linguist-generated=true

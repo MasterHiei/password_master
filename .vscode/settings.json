@@ -54,6 +54,7 @@
     "cupertino",
     "dartx",
     "fpdart",
+    "LTRB",
     "riverpod",
     "screenutil"
   ]
