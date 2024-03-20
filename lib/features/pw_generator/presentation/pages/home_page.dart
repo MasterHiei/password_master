@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
       body: const Center(
         child: GeneratedPasswordView(),
       ),
+      floatingActionButton: const GeneratePasswordButton(),
     );
   }
 }
