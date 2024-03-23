@@ -52,10 +52,18 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    def activity_version = "1.8.2"
+
+    implementation "androidx.activity:activity-ktx:$activity_version"
+}
