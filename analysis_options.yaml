@@ -181,7 +181,7 @@ linter:
     - provide_deprecation_message
     # - public_member_api_docs # DIFFERENT FROM FLUTTER/FLUTTER
     - recursive_getters
-    # - require_trailing_commas # would be nice, but requires a lot of manual work: 10,000+ code locations would need to be reformatted by hand after bulk fix is applied
+    - require_trailing_commas
     - secure_pubspec_urls
     - sized_box_for_whitespace
     - sized_box_shrink_expand
