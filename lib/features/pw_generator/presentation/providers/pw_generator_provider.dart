@@ -40,8 +40,8 @@ String pwGenerator(PwGeneratorRef ref, {int? seed}) {
     password += switch (pattern) {
       PwPattern.lowerCase => random(PwSettings.lowerCase),
       PwPattern.upperCase => random(PwSettings.upperCase),
-      PwPattern.number => random(PwSettings.numbers),
-      PwPattern.specialChar => random(PwSettings.specialChars),
+      PwPattern.numbers => random(PwSettings.numbers),
+      PwPattern.symbols => random(PwSettings.symbols),
     };
   }
   return password;

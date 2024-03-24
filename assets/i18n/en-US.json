@@ -9,5 +9,18 @@
   "drawer": {
     "intro": "Introduction",
     "settings": "Settings"
+  },
+  "pages": {
+    "generator": {
+      "options": {
+        "title": "Generator Options",
+        "quantity": "Quantity",
+        "length": "Length",
+        "lowercase": "Lowercase",
+        "uppercase": "Uppercase",
+        "numbers": "Numbers",
+        "symbols": "Symbols"
+      }
+    }
   }
 }

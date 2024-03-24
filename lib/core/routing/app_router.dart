@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../features/pw_generator/presentation/pages/generator_options_page.dart';
 import '../../features/pw_generator/presentation/pages/home_page.dart';
 
 part 'app_router.g.dart';
@@ -16,6 +17,13 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           path: '/',
           page: HomeRoute.page,
+        ),
+        AutoRoute(
+          path: '/generator/options',
+          page: GeneratorOptionsRoute.page,
+          type: const CustomRouteType(
+            transitionsBuilder: TransitionsBuilders.slideLeft,
+          ),
         ),
       ];
 }

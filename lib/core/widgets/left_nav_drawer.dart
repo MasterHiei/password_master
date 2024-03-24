@@ -88,11 +88,13 @@ class _LeftNavDrawerItem extends StatelessWidget {
         ),
         child: Row(
           children: <Widget>[
-            Icon(icon, size: 16.sp),
+            Icon(icon, size: Theme.of(context).iconTheme.size),
             SizedBox(width: _innerHorizontalPadding),
             Text(
               title,
-              style: TextStyle(fontSize: 14.sp),
+              style: TextStyle(
+                fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
+              ),
             ),
           ],
         ),

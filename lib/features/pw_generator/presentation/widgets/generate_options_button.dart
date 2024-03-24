@@ -1,4 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/routing/app_router.dart';
 
 class GenerateOptionsButton extends StatelessWidget {
   const GenerateOptionsButton({super.key});
@@ -6,7 +9,7 @@ class GenerateOptionsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () => context.router.push(const GeneratorOptionsRoute()),
       icon: const Icon(Icons.tune),
     );
   }

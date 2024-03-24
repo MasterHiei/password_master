@@ -27,7 +27,7 @@ class CopiedSuccessfullyToast extends StatelessWidget {
         LocaleKeys.toast_copied,
         style: TextStyle(
           color: Theme.of(context).colorScheme.onInverseSurface,
-          fontSize: 12.sp,
+          fontSize: Theme.of(context).textTheme.labelLarge?.fontSize,
         ),
       ).tr(context: context),
     );

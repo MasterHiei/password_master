@@ -15,10 +15,7 @@ class GeneratedPasswordView extends ConsumerWidget {
       customBorder: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(6.r),
       ),
-      onTap: () => _copyToClipboard(
-        context,
-        ref,
-      ),
+      onTap: () => _copyToClipboard(context, ref),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
         child: Text(

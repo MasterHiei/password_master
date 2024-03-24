@@ -4,17 +4,18 @@ import 'dart:ui';
 class AppSettings {
   const AppSettings._();
 
-  static const Size _iosDesignSize = Size(414, 896);
-
-  static const Size _androidDesignSize = Size(360, 780);
-
   static Size get designSize {
+    const Size iosDesignSize = Size(414, 896);
+    const Size androidDesignSize = Size(360, 780);
+
     if (Platform.isIOS) {
-      return AppSettings._iosDesignSize;
+      return iosDesignSize;
     }
     if (Platform.isAndroid) {
-      return AppSettings._androidDesignSize;
+      return androidDesignSize;
     }
-    return AppSettings._iosDesignSize;
+    return iosDesignSize;
   }
+
+  static Duration debounceDuration = const Duration(milliseconds: 300);
 }

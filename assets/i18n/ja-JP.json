@@ -9,5 +9,18 @@
   "drawer": {
     "intro": "チュートリアル",
     "settings": "設定"
+  },
+  "pages": {
+    "generator": {
+      "options": {
+        "title": "作成オプション",
+        "quantity": "生成数",
+        "length": "長さ",
+        "lowercase": "小文字",
+        "uppercase": "大文字",
+        "numbers": "数字",
+        "symbols": "記号"
+      }
+    }
   }
 }

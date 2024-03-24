@@ -4,10 +4,23 @@
     "title": "密码大师"
   },
   "toast": {
-    "copied": "复制成功"
+    "copied": "已复制到剪贴板"
   },
   "drawer": {
-    "intro": "介绍",
+    "intro": "使用说明",
     "settings": "设置"
+  },
+  "pages": {
+    "generator": {
+      "options": {
+        "title": "生成选项",
+        "quantity": "数量",
+        "length": "长度",
+        "lowercase": "小写字母",
+        "uppercase": "大写字母",
+        "numbers": "数字",
+        "symbols": "符号"
+      }
+    }
   }
 }
