@@ -4,11 +4,19 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/constants/pw_settings.dart';
 import '../../../../core/enums/pw_pattern.dart';
+import 'pw_generator_length_provider.dart';
+import 'pw_generator_patterns_provider.dart';
+import 'pw_generator_quantity_provider.dart';
 
 part 'pw_generator_provider.g.dart';
 
 @riverpod
-String pwGenerator(PwGeneratorRef ref, {int? seed}) {
+List<String> pwGenerator(PwGeneratorRef ref, {int? seed}) {
+  final double quantity = ref.watch(pwGeneratorQuantityProvider);
+  return List<String>.generate(quantity.toInt(), (_) => _generatePw(ref));
+}
+
+String _generatePw(PwGeneratorRef ref) {
   final Random rand = Random.secure();
   String password = '';
 
@@ -28,12 +36,25 @@ String pwGenerator(PwGeneratorRef ref, {int? seed}) {
     return random(source);
   }
 
-  for (int i = 0; i < PwSettings.maxLength; i++) {
-    // Avoid using number or symbol as the first character
-    final List<PwPattern> patterns = switch (i) {
-      0 => <PwPattern>[PwPattern.lowerCase, PwPattern.upperCase],
-      _ => PwPattern.values,
-    };
+  final double length = ref.watch(pwGeneratorLengthProvider);
+  for (int i = 0; i < length; i++) {
+    final List<PwPattern> enabledPatterns =
+        ref.watch(pwGeneratorPatternsProvider);
+    List<PwPattern> patterns = enabledPatterns;
+    if (i == 0) {
+      // Avoid using number or symbol as the first character
+      patterns = enabledPatterns
+          .where(
+            (PwPattern ele) => <PwPattern>[
+              PwPattern.lowerCase,
+              PwPattern.upperCase,
+            ].contains(ele),
+          )
+          .toList();
+    }
+    if (patterns.isEmpty) {
+      patterns = enabledPatterns;
+    }
 
     // Generate password with random pattern
     final PwPattern pattern = patterns[rand.nextInt(patterns.length)];

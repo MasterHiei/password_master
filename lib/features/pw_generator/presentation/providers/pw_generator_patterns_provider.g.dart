@@ -7,7 +7,7 @@ part of 'pw_generator_patterns_provider.dart';
 // **************************************************************************
 
 String _$pwGeneratorPatternsHash() =>
-    r'dc7aab3b885e52fef135da23a1427df967ba4f5e';
+    r'8d2e4393e3253136724653acfd963c6f4d822cf3';
 
 /// See also [PwGeneratorPatterns].
 @ProviderFor(PwGeneratorPatterns)

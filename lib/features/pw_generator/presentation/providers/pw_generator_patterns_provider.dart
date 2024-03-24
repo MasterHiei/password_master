@@ -33,6 +33,9 @@ class PwGeneratorPatterns extends _$PwGeneratorPatterns with DebounceMixin {
       true => oldPatterns..remove(pattern),
       false => <PwPattern>[...oldPatterns, pattern],
     };
+    if (newPatterns.isEmpty) {
+      return;
+    }
     state = newPatterns;
 
     debounce(

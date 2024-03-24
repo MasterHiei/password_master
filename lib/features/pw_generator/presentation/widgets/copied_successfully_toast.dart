@@ -8,20 +8,31 @@ import '../../../../generated/locale_keys.g.dart';
 class CopiedSuccessfullyToast extends StatelessWidget {
   const CopiedSuccessfullyToast({super.key});
 
-  static void show(BuildContext targetContext) => BotToast.showAttachedWidget(
-        targetContext: targetContext,
-        verticalOffset: 6.h,
+  static void show() => BotToast.showCustomText(
+        toastBuilder: (_) => const CopiedSuccessfullyToast(),
         duration: const Duration(seconds: 3),
-        attachedBuilder: (_) => const CopiedSuccessfullyToast(),
+        wrapToastAnimation: (
+          AnimationController controller,
+          _,
+          Widget child,
+        ) =>
+            _ToastAnimation(controller, child),
+        clickClose: true,
+        onlyOne: true,
+        useSafeArea: true,
       );
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w),
+      padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.inverseSurface,
         borderRadius: BorderRadius.circular(4.r),
+      ),
+      width: double.infinity,
+      margin: const EdgeInsets.symmetric(
+        horizontal: kFloatingActionButtonMargin,
       ),
       child: Text(
         LocaleKeys.toast_copied,
@@ -30,6 +41,54 @@ class CopiedSuccessfullyToast extends StatelessWidget {
           fontSize: Theme.of(context).textTheme.labelLarge?.fontSize,
         ),
       ).tr(context: context),
+    );
+  }
+}
+
+class _ToastAnimation extends StatefulWidget {
+  const _ToastAnimation(
+    this.controller,
+    this.child,
+  );
+
+  final AnimationController controller;
+  final Widget child;
+
+  @override
+  _ToastAnimationState createState() => _ToastAnimationState();
+}
+
+class _ToastAnimationState extends State<_ToastAnimation> {
+  late Animation<double> animation;
+
+  final Tween<double> _tweenScale = Tween<double>(
+    begin: 0.6,
+    end: 1.0,
+  );
+
+  @override
+  void initState() {
+    animation = CurvedAnimation(
+      parent: widget.controller,
+      curve: Curves.decelerate,
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: animation,
+      builder: (_, Widget? child) {
+        return Transform.scale(
+          scale: _tweenScale.evaluate(animation),
+          child: Opacity(
+            opacity: animation.value,
+            child: child,
+          ),
+        );
+      },
+      child: widget.child,
     );
   }
 }

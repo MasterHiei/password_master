@@ -11,33 +11,32 @@ class GeneratedPasswordView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return InkWell(
-      customBorder: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(6.r),
-      ),
-      onTap: () => _copyToClipboard(context, ref),
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
-        child: Text(
-          ref.watch(pwGeneratorProvider(seed: hashCode)),
-          style: TextStyle(
-            fontSize: 16.sp,
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
+    final List<String> items = ref.watch(pwGeneratorProvider(seed: hashCode));
+    return ListView.builder(
+      physics: const ClampingScrollPhysics(),
+      shrinkWrap: true,
+      itemBuilder: (_, int index) => _buildItemView(ref, index),
+      itemCount: items.length,
     );
   }
 
-  Future<void> _copyToClipboard(
-    BuildContext context,
-    WidgetRef ref,
-  ) async {
-    final String text = ref.read(pwGeneratorProvider(seed: hashCode));
-    await Clipboard.setData(ClipboardData(text: text));
+  Widget _buildItemView(WidgetRef ref, int index) => InkWell(
+        onTap: () => _copyToClipboard(ref, index),
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 12.w),
+          child: Text(
+            ref.watch(pwGeneratorProvider(seed: hashCode))[index],
+            style: TextStyle(
+              fontSize: 16.sp,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
 
-    if (context.mounted) {
-      CopiedSuccessfullyToast.show(context);
-    }
+  Future<void> _copyToClipboard(WidgetRef ref, int index) async {
+    final String text = ref.read(pwGeneratorProvider(seed: hashCode))[index];
+    await Clipboard.setData(ClipboardData(text: text));
+    CopiedSuccessfullyToast.show();
   }
 }

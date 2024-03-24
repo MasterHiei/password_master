@@ -6,7 +6,7 @@ part of 'pw_generator_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$pwGeneratorHash() => r'b87a1c7a66d9b0fd7895d869d718b4715025f441';
+String _$pwGeneratorHash() => r'f640b1011860212c20b425e7a416f0e3bce58bc5';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -34,7 +34,7 @@ class _SystemHash {
 const pwGeneratorProvider = PwGeneratorFamily();
 
 /// See also [pwGenerator].
-class PwGeneratorFamily extends Family<String> {
+class PwGeneratorFamily extends Family<List<String>> {
   /// See also [pwGenerator].
   const PwGeneratorFamily();
 
@@ -72,7 +72,7 @@ class PwGeneratorFamily extends Family<String> {
 }
 
 /// See also [pwGenerator].
-class PwGeneratorProvider extends AutoDisposeProvider<String> {
+class PwGeneratorProvider extends AutoDisposeProvider<List<String>> {
   /// See also [pwGenerator].
   PwGeneratorProvider({
     int? seed,
@@ -107,7 +107,7 @@ class PwGeneratorProvider extends AutoDisposeProvider<String> {
 
   @override
   Override overrideWith(
-    String Function(PwGeneratorRef provider) create,
+    List<String> Function(PwGeneratorRef provider) create,
   ) {
     return ProviderOverride(
       origin: this,
@@ -124,7 +124,7 @@ class PwGeneratorProvider extends AutoDisposeProvider<String> {
   }
 
   @override
-  AutoDisposeProviderElement<String> createElement() {
+  AutoDisposeProviderElement<List<String>> createElement() {
     return _PwGeneratorProviderElement(this);
   }
 
@@ -142,13 +142,13 @@ class PwGeneratorProvider extends AutoDisposeProvider<String> {
   }
 }
 
-mixin PwGeneratorRef on AutoDisposeProviderRef<String> {
+mixin PwGeneratorRef on AutoDisposeProviderRef<List<String>> {
   /// The parameter `seed` of this provider.
   int? get seed;
 }
 
-class _PwGeneratorProviderElement extends AutoDisposeProviderElement<String>
-    with PwGeneratorRef {
+class _PwGeneratorProviderElement
+    extends AutoDisposeProviderElement<List<String>> with PwGeneratorRef {
   _PwGeneratorProviderElement(super.provider);
 
   @override
