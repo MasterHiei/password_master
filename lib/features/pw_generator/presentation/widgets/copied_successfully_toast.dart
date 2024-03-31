@@ -31,9 +31,7 @@ class CopiedSuccessfullyToast extends StatelessWidget {
         borderRadius: BorderRadius.circular(4.r),
       ),
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(
-        horizontal: kFloatingActionButtonMargin,
-      ),
+      margin: const EdgeInsets.all(kFloatingActionButtonMargin),
       child: Text(
         LocaleKeys.toast_copied,
         style: TextStyle(
