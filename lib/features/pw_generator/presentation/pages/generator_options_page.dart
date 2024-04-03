@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/pw_settings.dart';
 import '../../../../core/enums/pw_pattern.dart';
+import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/top_app_bar.dart';
 import '../../../../generated/locale_keys.g.dart';
 import '../providers/pw_generator_length_provider.dart';
@@ -29,15 +30,13 @@ class GeneratorOptionsPage extends StatelessWidget {
     ];
     return Scaffold(
       appBar: TopAppBar(
-        title: const Text(
-          LocaleKeys.pages_generator_options_title,
-        ).tr(
+        title: const Text(LocaleKeys.pages_generator_options_title).tr(
           context: context,
         ),
       ),
       body: ListView.separated(
         physics: const ClampingScrollPhysics(),
-        padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
+        padding: AppTheme.defaultPagePadding,
         itemBuilder: (_, int index) => items[index],
         separatorBuilder: (_, __) => SizedBox(height: 12.h),
         itemCount: items.length,

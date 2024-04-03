@@ -6,6 +6,9 @@
   "toast": {
     "copied": "コピーされました"
   },
+  "button": {
+    "apply": "適用"
+  },
   "drawer": {
     "intro": "チュートリアル",
     "settings": "設定"
@@ -20,6 +23,19 @@
         "uppercase": "大文字",
         "numbers": "数字",
         "symbols": "記号"
+      }
+    },
+    "settings": {
+      "title": "設定",
+      "common": {
+        "title": "一般",
+        "theme": {
+          "title": "テーマ",
+          "system": "端末の設定を使う",
+          "light": "ライトモード",
+          "dark": "ダークモード"
+        },
+        "language": "言語"
       }
     }
   }

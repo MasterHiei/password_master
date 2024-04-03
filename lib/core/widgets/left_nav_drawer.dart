@@ -1,12 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../generated/locale_keys.g.dart';
+import '../routing/app_router.dart';
 
-double get _outerHorizontalPadding => 8.w;
-
-double get _innerHorizontalPadding => 12.w;
+const double _horizontalPadding = 12;
 
 class LeftNavDrawer extends StatelessWidget {
   const LeftNavDrawer({super.key});
@@ -30,14 +30,12 @@ class LeftNavDrawer extends StatelessWidget {
   Widget _buildHeader(BuildContext context) => Container(
         alignment: Alignment.centerLeft,
         height: kToolbarHeight,
-        padding: EdgeInsets.symmetric(
-          horizontal: _outerHorizontalPadding + _innerHorizontalPadding,
+        padding: const EdgeInsets.symmetric(
+          horizontal: _horizontalPadding * 2,
         ),
         child: Text(
           LocaleKeys.app_title,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
-          ),
+          style: Theme.of(context).textTheme.titleLarge,
         ).tr(context: context),
       );
 
@@ -46,19 +44,25 @@ class LeftNavDrawer extends StatelessWidget {
       _LeftNavDrawerItem(
         icon: Icons.school_outlined,
         title: LocaleKeys.drawer_intro.tr(context: context),
+        route: const SettingsRoute(),
       ),
-      Divider(
-        height: 8.h,
-        indent: _innerHorizontalPadding,
-        endIndent: _innerHorizontalPadding,
+      const Divider(
+        height: 12,
+        indent: _horizontalPadding,
+        endIndent: _horizontalPadding,
       ),
       _LeftNavDrawerItem(
         icon: Icons.settings_outlined,
         title: LocaleKeys.drawer_settings.tr(context: context),
+        route: const SettingsRoute(),
       ),
     ];
     return ListView.builder(
-      padding: EdgeInsets.symmetric(horizontal: _outerHorizontalPadding),
+      physics: const ClampingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(
+        vertical: 6,
+        horizontal: _horizontalPadding,
+      ),
       itemBuilder: (_, int index) => items[index],
       itemCount: items.length,
     );
@@ -69,37 +73,40 @@ class _LeftNavDrawerItem extends StatelessWidget {
   const _LeftNavDrawerItem({
     required this.icon,
     required this.title,
+    required this.route,
   });
 
   final IconData icon;
   final String title;
+  final PageRouteInfo route;
 
   @override
   Widget build(BuildContext context) {
-    const double height = 44;
+    const double height = kToolbarHeight;
     return InkWell(
       customBorder: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular((height / 2).r),
+        borderRadius: BorderRadius.circular(height / 2),
       ),
       child: Container(
-        height: height.h,
-        padding: EdgeInsets.symmetric(
-          horizontal: _innerHorizontalPadding,
+        height: height,
+        padding: const EdgeInsets.symmetric(
+          horizontal: _horizontalPadding,
         ),
         child: Row(
           children: <Widget>[
-            Icon(icon, size: Theme.of(context).iconTheme.size),
-            SizedBox(width: _innerHorizontalPadding),
+            Icon(icon),
+            const SizedBox(width: _horizontalPadding),
             Text(
               title,
-              style: TextStyle(
-                fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
-              ),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],
         ),
       ),
-      onTap: () {},
+      onTap: () {
+        Navigator.pop(context);
+        context.router.push(route);
+      },
     );
   }
 }

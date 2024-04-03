@@ -6,6 +6,9 @@
   "toast": {
     "copied": "Copied successfully"
   },
+  "button": {
+    "apply": "Apply"
+  },
   "drawer": {
     "intro": "Introduction",
     "settings": "Settings"
@@ -20,6 +23,19 @@
         "uppercase": "Uppercase",
         "numbers": "Numbers",
         "symbols": "Symbols"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "common": {
+        "title": "Common",
+        "theme": {
+          "title": "Theme",
+          "system": "Follow System",
+          "light": "Light Mode",
+          "dark": "Dark Mode"
+        },
+        "language": "Language"
       }
     }
   }

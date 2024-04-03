@@ -13,7 +13,7 @@ class PwSettings {
 
   static const int maxLength = 32;
 
-  static const int defaultLength = 8;
+  static const int defaultLength = 12;
 
   static const String lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 

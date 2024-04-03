@@ -34,10 +34,9 @@ class CopiedSuccessfullyToast extends StatelessWidget {
       margin: const EdgeInsets.all(kFloatingActionButtonMargin),
       child: Text(
         LocaleKeys.toast_copied,
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.onInverseSurface,
-          fontSize: Theme.of(context).textTheme.labelLarge?.fontSize,
-        ),
+        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: Theme.of(context).colorScheme.onInverseSurface,
+            ),
       ).tr(context: context),
     );
   }

@@ -6,6 +6,9 @@
   "toast": {
     "copied": "已复制到剪贴板"
   },
+  "button": {
+    "apply": "应用"
+  },
   "drawer": {
     "intro": "使用说明",
     "settings": "设置"
@@ -20,6 +23,19 @@
         "uppercase": "大写字母",
         "numbers": "数字",
         "symbols": "符号"
+      }
+    },
+    "settings": {
+      "title": "设置",
+      "common": {
+        "title": "常规",
+        "theme": {
+          "title": "主题",
+          "system": "跟随系统",
+          "light": "浅色模式",
+          "dark": "深色模式"
+        },
+        "language": "语言"
       }
     }
   }

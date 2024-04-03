@@ -23,9 +23,7 @@ class GeneratorOptionItemView extends StatelessWidget {
       GeneratorOptionItemView(
         leading: Text(
           leading,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         title: Slider(
           value: value,
@@ -35,9 +33,7 @@ class GeneratorOptionItemView extends StatelessWidget {
         ),
         trailing: Text(
           trailing,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
       );
 
@@ -51,9 +47,7 @@ class GeneratorOptionItemView extends StatelessWidget {
       GeneratorOptionItemView(
         title: Text(
           title,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         trailing: Checkbox(
           value: value,

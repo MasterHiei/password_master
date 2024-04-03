@@ -3,6 +3,9 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../features/pw_generator/presentation/pages/generator_options_page.dart';
 import '../../features/pw_generator/presentation/pages/home_page.dart';
+import '../../features/settings/presentation/pages/localization_settings_page.dart';
+import '../../features/settings/presentation/pages/settings_page.dart';
+import '../../features/settings/presentation/pages/theme_settings_page.dart';
 
 part 'app_router.g.dart';
 part 'app_router.gr.dart';
@@ -24,6 +27,18 @@ class AppRouter extends _$AppRouter {
           type: const CustomRouteType(
             transitionsBuilder: TransitionsBuilders.slideLeft,
           ),
+        ),
+        AutoRoute(
+          path: '/settings',
+          page: SettingsRoute.page,
+        ),
+        AutoRoute(
+          path: '/settings/localization',
+          page: LocalizationSettingsRoute.page,
+        ),
+        AutoRoute(
+          path: '/settings/theme',
+          page: ThemeSettingsRoute.page,
         ),
       ];
 }
