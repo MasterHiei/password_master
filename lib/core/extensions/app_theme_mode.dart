@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../generated/locale_keys.g.dart';
 
-extension type AppThemeMode(AdaptiveThemeMode _) {
+extension type AppThemeMode(AdaptiveThemeMode value) {
   String localizedName(BuildContext context) {
     final String localeKey = switch (this) {
       AdaptiveThemeMode.dark => LocaleKeys.pages_settings_common_theme_dark,
@@ -15,5 +15,5 @@ extension type AppThemeMode(AdaptiveThemeMode _) {
   }
 
   void enable(BuildContext context) =>
-      AdaptiveTheme.of(context).setThemeMode(_);
+      AdaptiveTheme.of(context).setThemeMode(value);
 }
