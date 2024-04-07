@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/enums/i18n.dart';
-import '../../../../core/extensions/localized_adaptive_theme_mode.dart';
+import '../../../../core/extensions/app_theme_mode.dart';
 import '../../../../core/routing/app_router.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/top_app_bar.dart';
@@ -17,18 +17,20 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> items = <Widget>[
+      _buildCommonSection(context),
+    ];
     return Scaffold(
       appBar: TopAppBar(
         title: const Text(LocaleKeys.pages_settings_title).tr(
           context: context,
         ),
       ),
-      body: ListView(
+      body: ListView.builder(
         physics: const ClampingScrollPhysics(),
         padding: AppTheme.defaultPagePadding,
-        children: <Widget>[
-          _buildCommonSection(context),
-        ],
+        itemBuilder: (_, int index) => items[index],
+        itemCount: items.length,
       ),
     );
   }
@@ -51,7 +53,7 @@ class SettingsPage extends StatelessWidget {
               title: LocaleKeys.pages_settings_common_theme_title.tr(
                 context: context,
               ),
-              subtitle: LocalizedThemeMode(mode).localizedName(context),
+              subtitle: AppThemeMode(mode).localizedName(context),
               onTap: () => context.router.push(const ThemeSettingsRoute()),
             ),
           ),

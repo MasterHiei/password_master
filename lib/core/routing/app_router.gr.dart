@@ -42,7 +42,7 @@ abstract class _$AppRouter extends RootStackRouter {
     ThemeSettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ThemeSettingsPage(),
+        child: WrappedRoute(child: const ThemeSettingsPage()),
       );
     },
   };
