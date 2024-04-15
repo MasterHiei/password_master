@@ -6,7 +6,7 @@ part of 'pw_generator_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$pwGeneratorHash() => r'f640b1011860212c20b425e7a416f0e3bce58bc5';
+String _$pwGeneratorHash() => r'ef9f8b7d8aa86aac4c214855f6c367afbc7c61b8';
 
 /// Copied from Dart SDK
 class _SystemHash {

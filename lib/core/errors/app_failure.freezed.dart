@@ -81,8 +81,8 @@ as String,
 /// @nodoc
 
 
-class _$LocalizedErrorImpl extends _LocalizedError  {
-  const _$LocalizedErrorImpl(this.message): super._();
+class _$LocalizedErrorImpl  implements _LocalizedError {
+  const _$LocalizedErrorImpl(this.message);
 
   
 
@@ -142,9 +142,9 @@ _$$LocalizedErrorImplCopyWith<_$LocalizedErrorImpl> get copyWith => __$$Localize
 }
 
 
-abstract class _LocalizedError extends AppFailure {
+abstract class _LocalizedError implements AppFailure {
   const factory _LocalizedError(final  String message) = _$LocalizedErrorImpl;
-  const _LocalizedError._(): super._();
+  
 
   
 
@@ -184,8 +184,8 @@ null == e ? _value.e : e ,
 /// @nodoc
 
 
-class _$UnexpectedErrorImpl extends _UnexpectedError  {
-  const _$UnexpectedErrorImpl(this.e): super._();
+class _$UnexpectedErrorImpl  implements _UnexpectedError {
+  const _$UnexpectedErrorImpl(this.e);
 
   
 
@@ -245,9 +245,9 @@ _$$UnexpectedErrorImplCopyWith<_$UnexpectedErrorImpl> get copyWith => __$$Unexpe
 }
 
 
-abstract class _UnexpectedError extends AppFailure {
+abstract class _UnexpectedError implements AppFailure {
   const factory _UnexpectedError(final  Object e) = _$UnexpectedErrorImpl;
-  const _UnexpectedError._(): super._();
+  
 
   
 
