@@ -1,16 +1,23 @@
 # Password Master
 
-A new Flutter project.
+Welcome to Password Master, your go-to solution for secure password management!</br>
+This mobile application ensures robust password generation and management with support for iOS and Android platforms.
 
-## Getting Started
+# Features
+- **Secure Password Generation**: Generate strong and unique passwords effortlessly.
+- **Efficient Password Management**: Organize and securely store your passwords.
+- **Cross-Platform Compatibility**: Supports both iOS and Android platforms with Flutter.
+- **Multi-Language Support**: Available in English, Japanese, and Chinese languages.
+- **Dark Mode/Light Mode Support**: Seamlessly switch between dark and light modes.
 
-This project is a starting point for a Flutter application.
+# Getting Started
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone this repository.
+2. Install Flutter on your development environment.
+3. Run flutter run to launch the app on your device or emulator.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Contributing
+Contributions are welcome! Feel free to send Pull Requests, open Issues...
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+License
+This project is licensed under the [MIT](https://github.com/MasterHiei/password_master/blob/main/LICENSE) License.
