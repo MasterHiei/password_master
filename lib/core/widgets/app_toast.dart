@@ -1,22 +1,16 @@
 import 'package:bot_toast/bot_toast.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../generated/locale_keys.g.dart';
+class AppToast extends StatelessWidget {
+  const AppToast._(this.text);
 
-class CopiedSuccessfullyToast extends StatelessWidget {
-  const CopiedSuccessfullyToast({super.key});
+  final String text;
 
-  static void show() => BotToast.showCustomText(
-        toastBuilder: (_) => const CopiedSuccessfullyToast(),
+  static void show(String text) => BotToast.showCustomText(
+        toastBuilder: (_) => AppToast._(text),
         duration: const Duration(seconds: 3),
-        wrapToastAnimation: (
-          AnimationController controller,
-          _,
-          Widget child,
-        ) =>
-            _ToastAnimation(controller, child),
+        wrapToastAnimation: _ToastAnimation.new,
         clickClose: true,
         onlyOne: true,
         useSafeArea: true,
@@ -24,20 +18,21 @@ class CopiedSuccessfullyToast extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Container(
       padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.inverseSurface,
+        color: theme.colorScheme.inverseSurface,
         borderRadius: BorderRadius.circular(4.r),
       ),
       width: double.infinity,
       margin: const EdgeInsets.all(kFloatingActionButtonMargin),
       child: Text(
-        LocaleKeys.toast_copied,
-        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: Theme.of(context).colorScheme.onInverseSurface,
-            ),
-      ).tr(context: context),
+        text,
+        style: theme.textTheme.labelLarge?.copyWith(
+          color: theme.colorScheme.onInverseSurface,
+        ),
+      ),
     );
   }
 }
@@ -45,10 +40,12 @@ class CopiedSuccessfullyToast extends StatelessWidget {
 class _ToastAnimation extends StatefulWidget {
   const _ToastAnimation(
     this.controller,
+    this.cancelFunc,
     this.child,
   );
 
   final AnimationController controller;
+  final CancelFunc cancelFunc;
   final Widget child;
 
   @override
