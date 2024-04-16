@@ -14,7 +14,7 @@ class Password<T extends String> {
 
   final String value;
 
-  static Either<ValueFailure<String>, Password<String>> of<T extends String>(
+  static Either<ValueFailure<String>, Password<String>> parse<T extends String>(
     T? value,
   ) {
     if (value == null ||
