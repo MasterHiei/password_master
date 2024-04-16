@@ -19,5 +19,5 @@ This mobile application ensures robust password generation and management with s
 # Contributing
 Contributions are welcome! Feel free to send Pull Requests, open Issues...
 
-License
+# License
 This project is licensed under the [MIT](https://github.com/MasterHiei/password_master/blob/main/LICENSE) License.
