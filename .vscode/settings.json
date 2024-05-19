@@ -51,9 +51,11 @@
     "*.dart": "${capture}.freezed.dart, ${capture}.g.dart, ${capture}.gr.dart"
   },
   "cSpell.words": [
+    "Cacheable",
     "chenxil",
     "cupertino",
     "dartx",
+    "dtos",
     "fpdart",
     "LTRB",
     "prefs",

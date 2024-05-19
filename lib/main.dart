@@ -3,11 +3,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constants/app_settings.dart';
 import 'core/enums/i18n.dart';
 import 'core/providers/prefs_provider.dart';
+import 'features/pw_manager/data/dtos/cacheable_password_dto.dart';
 import 'password_master_app.dart';
 
 void main() async {
@@ -34,6 +36,9 @@ Future<void> _ensureInitialized() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await EasyLocalization.ensureInitialized();
+
+  await Hive.initFlutter();
+  Hive.registerAdapter(CacheablePasswordAdapter());
 }
 
 Future<List<Override>> _generateOverrides() async {

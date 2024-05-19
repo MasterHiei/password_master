@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:ui';
 
-class AppSettings {
+final class AppSettings {
   const AppSettings._();
 
   static Size get designSize {

@@ -1,6 +1,6 @@
 import '../enums/pw_pattern.dart';
 
-class PwSettings {
+final class PwSettings {
   const PwSettings._();
 
   static const int minQuantity = 1;

@@ -1,4 +1,4 @@
-class PrefsKeys {
+final class PrefsKeys {
   const PrefsKeys._();
 
   static const String pwQuantity = 'pw_quantity';
