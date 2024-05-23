@@ -18,10 +18,15 @@ Future<LazyBox<List<CacheablePassword>>> cachedPasswordsBox(
   CachedPasswordsBoxRef ref,
 ) async {
   final Uint8List key = await _readEncryptionKey();
-  return Hive.openLazyBox(
+  final LazyBox<List<CacheablePassword>> box = await Hive.openLazyBox(
     HiveBoxes.cachedPasswords,
     encryptionCipher: HiveAesCipher(key),
   );
+  ref.onDispose(() async {
+    await box.compact();
+    await box.close();
+  });
+  return box;
 }
 
 Future<Uint8List> _readEncryptionKey() async {

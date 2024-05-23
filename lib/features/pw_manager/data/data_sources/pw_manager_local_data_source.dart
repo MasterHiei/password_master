@@ -11,17 +11,19 @@ PwManagerLocalDataSource pwManagerLocalDataSource(
     const PwManagerLocalDataSourceImpl();
 
 abstract class PwManagerLocalDataSource {
-  Future<void> save(CacheablePassword value);
+  Future<void> save(CacheablePassword pw);
 
-  Future<void> delete(CacheablePassword value);
+  Future<void> delete(List<CacheablePassword> pws);
 }
 
 final class PwManagerLocalDataSourceImpl implements PwManagerLocalDataSource {
   const PwManagerLocalDataSourceImpl();
 
   @override
-  Future<void> save(CacheablePassword data) => data.save();
+  Future<void> save(CacheablePassword pw) => pw.save();
 
   @override
-  Future<void> delete(CacheablePassword data) => data.delete();
+  Future<void> delete(List<CacheablePassword> pws) async => Future.wait(
+        pws.map((CacheablePassword pw) async => pw.delete),
+      );
 }
