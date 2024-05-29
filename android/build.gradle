@@ -5,14 +5,14 @@ allprojects {
     }
 }
 
-rootProject.buildDir = "../build"
+rootProject.getLayout().setBuildDirectory("../build")
 subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.getLayout().setBuildDirectory("${rootProject.buildDir}/${project.name}")
 }
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    delete rootProject.getLayout().getBuildDirectory()
 }
