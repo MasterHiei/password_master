@@ -7,7 +7,7 @@ part of 'cached_passwords_box_provider.dart';
 // **************************************************************************
 
 String _$cachedPasswordsBoxHash() =>
-    r'a78d9bb5936f15a6ad008f82a1009da47b5cb205';
+    r'6888be0be534ed7989bf83169c27fd72d3305771';
 
 /// See also [cachedPasswordsBox].
 @ProviderFor(cachedPasswordsBox)
