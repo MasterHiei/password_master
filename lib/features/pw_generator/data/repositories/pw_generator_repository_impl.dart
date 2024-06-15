@@ -22,7 +22,7 @@ PwGeneratorRepository pwGeneratorRepository(
 class PwGeneratorRepositoryImpl
     with RepositoryErrorHandlerMixin
     implements PwGeneratorRepository {
-  PwGeneratorRepositoryImpl(
+  const PwGeneratorRepositoryImpl(
     this.localDataSource,
   );
 

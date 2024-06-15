@@ -18,12 +18,12 @@ final _privateConstructorUsedError = UnsupportedError('It seems like you constru
 mixin _$UseCaseParams {
 
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  no,required TResult Function( int value)  savePwQuantity,required TResult Function( int value)  savePwLength,required TResult Function( List<PwPattern> value)  savePwPatterns,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  no,TResult? Function( int value)?  savePwQuantity,TResult? Function( int value)?  savePwLength,TResult? Function( List<PwPattern> value)?  savePwPatterns,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  no,TResult Function( int value)?  savePwQuantity,TResult Function( int value)?  savePwLength,TResult Function( List<PwPattern> value)?  savePwPatterns,required TResult orElse(),}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoParams value)  no,required TResult Function( SavePwQuantityParams value)  savePwQuantity,required TResult Function( SavePwLengthParams value)  savePwLength,required TResult Function( SavePwPatternsParams value)  savePwPatterns,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoParams value)?  no,TResult? Function( SavePwQuantityParams value)?  savePwQuantity,TResult? Function( SavePwLengthParams value)?  savePwLength,TResult? Function( SavePwPatternsParams value)?  savePwPatterns,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoParams value)?  no,TResult Function( SavePwQuantityParams value)?  savePwQuantity,TResult Function( SavePwLengthParams value)?  savePwLength,TResult Function( SavePwPatternsParams value)?  savePwPatterns,required TResult orElse(),}) => throw _privateConstructorUsedError;
+
+
+
+
+
+
 
 
 }
@@ -95,36 +95,12 @@ bool operator ==(Object other) {
 int get hashCode => runtimeType.hashCode;
 
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  no,required TResult Function( int value)  savePwQuantity,required TResult Function( int value)  savePwLength,required TResult Function( List<PwPattern> value)  savePwPatterns,}) {
-  return no();
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  no,TResult? Function( int value)?  savePwQuantity,TResult? Function( int value)?  savePwLength,TResult? Function( List<PwPattern> value)?  savePwPatterns,}) {
-  return no?.call();
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  no,TResult Function( int value)?  savePwQuantity,TResult Function( int value)?  savePwLength,TResult Function( List<PwPattern> value)?  savePwPatterns,required TResult orElse(),}) {
-  if (no != null) {
-    return no();
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoParams value)  no,required TResult Function( SavePwQuantityParams value)  savePwQuantity,required TResult Function( SavePwLengthParams value)  savePwLength,required TResult Function( SavePwPatternsParams value)  savePwPatterns,}) {
-  return no(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoParams value)?  no,TResult? Function( SavePwQuantityParams value)?  savePwQuantity,TResult? Function( SavePwLengthParams value)?  savePwLength,TResult? Function( SavePwPatternsParams value)?  savePwPatterns,}) {
-  return no?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoParams value)?  no,TResult Function( SavePwQuantityParams value)?  savePwQuantity,TResult Function( SavePwLengthParams value)?  savePwLength,TResult Function( SavePwPatternsParams value)?  savePwPatterns,required TResult orElse(),}) {
-  if (no != null) {
-    return no(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
@@ -197,36 +173,12 @@ int get hashCode => Object.hash(runtimeType,value);
 @pragma('vm:prefer-inline')
 _$$SavePwQuantityParamsImplCopyWith<_$SavePwQuantityParamsImpl> get copyWith => __$$SavePwQuantityParamsImplCopyWithImpl<_$SavePwQuantityParamsImpl>(this, _$identity);
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  no,required TResult Function( int value)  savePwQuantity,required TResult Function( int value)  savePwLength,required TResult Function( List<PwPattern> value)  savePwPatterns,}) {
-  return savePwQuantity(value);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  no,TResult? Function( int value)?  savePwQuantity,TResult? Function( int value)?  savePwLength,TResult? Function( List<PwPattern> value)?  savePwPatterns,}) {
-  return savePwQuantity?.call(value);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  no,TResult Function( int value)?  savePwQuantity,TResult Function( int value)?  savePwLength,TResult Function( List<PwPattern> value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwQuantity != null) {
-    return savePwQuantity(value);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoParams value)  no,required TResult Function( SavePwQuantityParams value)  savePwQuantity,required TResult Function( SavePwLengthParams value)  savePwLength,required TResult Function( SavePwPatternsParams value)  savePwPatterns,}) {
-  return savePwQuantity(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoParams value)?  no,TResult? Function( SavePwQuantityParams value)?  savePwQuantity,TResult? Function( SavePwLengthParams value)?  savePwLength,TResult? Function( SavePwPatternsParams value)?  savePwPatterns,}) {
-  return savePwQuantity?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoParams value)?  no,TResult Function( SavePwQuantityParams value)?  savePwQuantity,TResult Function( SavePwLengthParams value)?  savePwLength,TResult Function( SavePwPatternsParams value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwQuantity != null) {
-    return savePwQuantity(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
@@ -301,36 +253,12 @@ int get hashCode => Object.hash(runtimeType,value);
 @pragma('vm:prefer-inline')
 _$$SavePwLengthParamsImplCopyWith<_$SavePwLengthParamsImpl> get copyWith => __$$SavePwLengthParamsImplCopyWithImpl<_$SavePwLengthParamsImpl>(this, _$identity);
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  no,required TResult Function( int value)  savePwQuantity,required TResult Function( int value)  savePwLength,required TResult Function( List<PwPattern> value)  savePwPatterns,}) {
-  return savePwLength(value);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  no,TResult? Function( int value)?  savePwQuantity,TResult? Function( int value)?  savePwLength,TResult? Function( List<PwPattern> value)?  savePwPatterns,}) {
-  return savePwLength?.call(value);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  no,TResult Function( int value)?  savePwQuantity,TResult Function( int value)?  savePwLength,TResult Function( List<PwPattern> value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwLength != null) {
-    return savePwLength(value);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoParams value)  no,required TResult Function( SavePwQuantityParams value)  savePwQuantity,required TResult Function( SavePwLengthParams value)  savePwLength,required TResult Function( SavePwPatternsParams value)  savePwPatterns,}) {
-  return savePwLength(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoParams value)?  no,TResult? Function( SavePwQuantityParams value)?  savePwQuantity,TResult? Function( SavePwLengthParams value)?  savePwLength,TResult? Function( SavePwPatternsParams value)?  savePwPatterns,}) {
-  return savePwLength?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoParams value)?  no,TResult Function( SavePwQuantityParams value)?  savePwQuantity,TResult Function( SavePwLengthParams value)?  savePwLength,TResult Function( SavePwPatternsParams value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwLength != null) {
-    return savePwLength(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
@@ -411,36 +339,12 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 @pragma('vm:prefer-inline')
 _$$SavePwPatternsParamsImplCopyWith<_$SavePwPatternsParamsImpl> get copyWith => __$$SavePwPatternsParamsImplCopyWithImpl<_$SavePwPatternsParamsImpl>(this, _$identity);
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  no,required TResult Function( int value)  savePwQuantity,required TResult Function( int value)  savePwLength,required TResult Function( List<PwPattern> value)  savePwPatterns,}) {
-  return savePwPatterns(value);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  no,TResult? Function( int value)?  savePwQuantity,TResult? Function( int value)?  savePwLength,TResult? Function( List<PwPattern> value)?  savePwPatterns,}) {
-  return savePwPatterns?.call(value);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  no,TResult Function( int value)?  savePwQuantity,TResult Function( int value)?  savePwLength,TResult Function( List<PwPattern> value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwPatterns != null) {
-    return savePwPatterns(value);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoParams value)  no,required TResult Function( SavePwQuantityParams value)  savePwQuantity,required TResult Function( SavePwLengthParams value)  savePwLength,required TResult Function( SavePwPatternsParams value)  savePwPatterns,}) {
-  return savePwPatterns(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoParams value)?  no,TResult? Function( SavePwQuantityParams value)?  savePwQuantity,TResult? Function( SavePwLengthParams value)?  savePwLength,TResult? Function( SavePwPatternsParams value)?  savePwPatterns,}) {
-  return savePwPatterns?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoParams value)?  no,TResult Function( SavePwQuantityParams value)?  savePwQuantity,TResult Function( SavePwLengthParams value)?  savePwLength,TResult Function( SavePwPatternsParams value)?  savePwPatterns,required TResult orElse(),}) {
-  if (savePwPatterns != null) {
-    return savePwPatterns(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
@@ -454,5 +358,171 @@ abstract class SavePwPatternsParams implements UseCaseParams {
  List<PwPattern> get value;
 @JsonKey(ignore: true)
 _$$SavePwPatternsParamsImplCopyWith<_$SavePwPatternsParamsImpl> get copyWith => throw _privateConstructorUsedError;
+
+}
+
+/// @nodoc
+abstract class _$$SavePwParamsImplCopyWith<$Res>  {
+  factory _$$SavePwParamsImplCopyWith(_$SavePwParamsImpl value, $Res Function(_$SavePwParamsImpl) then) = __$$SavePwParamsImplCopyWithImpl<$Res>;
+@useResult
+$Res call({
+ CacheablePassword value
+});
+
+
+
+}
+
+/// @nodoc
+class __$$SavePwParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithImpl<$Res, _$SavePwParamsImpl> implements _$$SavePwParamsImplCopyWith<$Res> {
+  __$$SavePwParamsImplCopyWithImpl(_$SavePwParamsImpl _value, $Res Function(_$SavePwParamsImpl) _then)
+      : super(_value, _then);
+
+
+@pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
+  return _then(_$SavePwParamsImpl(
+null == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
+as CacheablePassword,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class _$SavePwParamsImpl  implements SavePwParams {
+  const _$SavePwParamsImpl(this.value);
+
+  
+
+@override final  CacheablePassword value;
+
+@override
+String toString() {
+  return 'UseCaseParams.savePassword(value: $value)';
+}
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$SavePwParamsImpl&&(identical(other.value, value) || other.value == value));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,value);
+
+@JsonKey(ignore: true)
+@override
+@pragma('vm:prefer-inline')
+_$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => __$$SavePwParamsImplCopyWithImpl<_$SavePwParamsImpl>(this, _$identity);
+
+
+
+
+
+
+
+
+}
+
+
+abstract class SavePwParams implements UseCaseParams {
+  const factory SavePwParams(final  CacheablePassword value) = _$SavePwParamsImpl;
+  
+
+  
+
+ CacheablePassword get value;
+@JsonKey(ignore: true)
+_$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => throw _privateConstructorUsedError;
+
+}
+
+/// @nodoc
+abstract class _$$DeletePwsParamsImplCopyWith<$Res>  {
+  factory _$$DeletePwsParamsImplCopyWith(_$DeletePwsParamsImpl value, $Res Function(_$DeletePwsParamsImpl) then) = __$$DeletePwsParamsImplCopyWithImpl<$Res>;
+@useResult
+$Res call({
+ List<CacheablePassword> values
+});
+
+
+
+}
+
+/// @nodoc
+class __$$DeletePwsParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithImpl<$Res, _$DeletePwsParamsImpl> implements _$$DeletePwsParamsImplCopyWith<$Res> {
+  __$$DeletePwsParamsImplCopyWithImpl(_$DeletePwsParamsImpl _value, $Res Function(_$DeletePwsParamsImpl) _then)
+      : super(_value, _then);
+
+
+@pragma('vm:prefer-inline') @override $Res call({Object? values = null,}) {
+  return _then(_$DeletePwsParamsImpl(
+null == values ? _value._values : values // ignore: cast_nullable_to_non_nullable
+as List<CacheablePassword>,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class _$DeletePwsParamsImpl  implements DeletePwsParams {
+  const _$DeletePwsParamsImpl(final  List<CacheablePassword> values): _values = values;
+
+  
+
+ final  List<CacheablePassword> _values;
+@override List<CacheablePassword> get values {
+  if (_values is EqualUnmodifiableListView) return _values;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_values);
+}
+
+
+@override
+String toString() {
+  return 'UseCaseParams.deletePasswords(values: $values)';
+}
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$DeletePwsParamsImpl&&const DeepCollectionEquality().equals(other._values, _values));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_values));
+
+@JsonKey(ignore: true)
+@override
+@pragma('vm:prefer-inline')
+_$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => __$$DeletePwsParamsImplCopyWithImpl<_$DeletePwsParamsImpl>(this, _$identity);
+
+
+
+
+
+
+
+
+}
+
+
+abstract class DeletePwsParams implements UseCaseParams {
+  const factory DeletePwsParams(final  List<CacheablePassword> values) = _$DeletePwsParamsImpl;
+  
+
+  
+
+ List<CacheablePassword> get values;
+@JsonKey(ignore: true)
+_$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
