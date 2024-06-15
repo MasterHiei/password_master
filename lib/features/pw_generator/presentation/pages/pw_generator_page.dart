@@ -9,8 +9,8 @@ import '../../../../generated/locale_keys.g.dart';
 import '../widgets/index.dart';
 
 @RoutePage()
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class PwGeneratorPage extends StatelessWidget {
+  const PwGeneratorPage({super.key});
 
   @override
   Widget build(BuildContext context) {

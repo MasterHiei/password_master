@@ -21,16 +21,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const GeneratorOptionsPage(),
       );
     },
-    HomeRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HomePage(),
-      );
-    },
     LocalizationSettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: WrappedRoute(child: const LocalizationSettingsPage()),
+      );
+    },
+    PwGeneratorRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PwGeneratorPage(),
       );
     },
     SettingsRoute.name: (routeData) {
@@ -63,20 +63,6 @@ class GeneratorOptionsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [HomePage]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute({List<PageRouteInfo>? children})
-      : super(
-          HomeRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'HomeRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
 /// [LocalizationSettingsPage]
 class LocalizationSettingsRoute extends PageRouteInfo<void> {
   const LocalizationSettingsRoute({List<PageRouteInfo>? children})
@@ -86,6 +72,20 @@ class LocalizationSettingsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LocalizationSettingsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PwGeneratorPage]
+class PwGeneratorRoute extends PageRouteInfo<void> {
+  const PwGeneratorRoute({List<PageRouteInfo>? children})
+      : super(
+          PwGeneratorRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PwGeneratorRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

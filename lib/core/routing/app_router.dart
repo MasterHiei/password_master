@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../features/pw_generator/presentation/pages/generator_options_page.dart';
-import '../../features/pw_generator/presentation/pages/home_page.dart';
+import '../../features/pw_generator/presentation/pages/pw_generator_page.dart';
 import '../../features/settings/presentation/pages/localization_settings_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 import '../../features/settings/presentation/pages/theme_settings_page.dart';
@@ -19,7 +19,7 @@ class AppRouter extends _$AppRouter {
   List<AutoRoute> get routes => <AutoRoute>[
         AutoRoute(
           path: '/',
-          page: HomeRoute.page,
+          page: PwGeneratorRoute.page,
         ),
         AutoRoute(
           path: '/generator/options',
