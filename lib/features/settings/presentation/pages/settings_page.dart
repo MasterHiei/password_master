@@ -44,7 +44,7 @@ class SettingsPage extends StatelessWidget {
               context: context,
             ),
             subtitle: I18n.fromLocale(context.locale).localizedName,
-            onTap: () => context.router.push(const LocalizationSettingsRoute()),
+            onTap: () => const LocalizationSettingsRoute().push<void>(context),
           ),
           ValueListenableBuilder<AdaptiveThemeMode>(
             valueListenable: AdaptiveTheme.of(context).modeChangeNotifier,
@@ -54,7 +54,7 @@ class SettingsPage extends StatelessWidget {
                 context: context,
               ),
               subtitle: AppThemeMode(mode).localizedName(context),
-              onTap: () => context.router.push(const ThemeSettingsRoute()),
+              onTap: () => const ThemeSettingsRoute().push<void>(context),
             ),
           ),
         ],

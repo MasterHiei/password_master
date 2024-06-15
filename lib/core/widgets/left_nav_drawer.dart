@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../generated/locale_keys.g.dart';
 import '../routing/app_router.dart';
+import 'app_toast.dart';
 
 const double _horizontalPadding = 12;
 
@@ -44,7 +45,7 @@ class LeftNavDrawer extends StatelessWidget {
       _LeftNavDrawerItem(
         icon: Icons.school_outlined,
         title: LocaleKeys.drawer_intro.tr(context: context),
-        route: const SettingsRoute(),
+        onTap: () => AppToast.show('Coming soon!'),
       ),
       const Divider(
         height: 12,
@@ -73,12 +74,14 @@ class _LeftNavDrawerItem extends StatelessWidget {
   const _LeftNavDrawerItem({
     required this.icon,
     required this.title,
-    required this.route,
+    this.route,
+    this.onTap,
   });
 
   final IconData icon;
   final String title;
-  final PageRouteInfo route;
+  final PageRouteInfo? route;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -103,9 +106,12 @@ class _LeftNavDrawerItem extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () {
-        Navigator.pop(context);
-        context.router.push(route);
+      onTap: () async {
+        await context.router.maybePop();
+        if (context.mounted) {
+          await route?.push<void>(context);
+          onTap?.call();
+        }
       },
     );
   }
