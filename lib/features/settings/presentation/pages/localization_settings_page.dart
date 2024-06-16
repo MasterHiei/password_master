@@ -35,10 +35,7 @@ class LocalizationSettingsPage extends StatelessWidget
           ApplyLocalizationSettingsButton(),
         ],
       ),
-      body: Padding(
-        padding: AppTheme.defaultPagePadding,
-        child: _buildListView(context),
-      ),
+      body: _buildListView(context),
     );
   }
 
@@ -48,6 +45,7 @@ class LocalizationSettingsPage extends StatelessWidget
     );
     return ListView.builder(
       physics: const ClampingScrollPhysics(),
+      padding: AppTheme.defaultPagePadding,
       itemBuilder: (_, int index) => items.elementAt(index),
       itemCount: items.length,
     );
