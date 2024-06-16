@@ -1,28 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cached_passwords_box_provider.dart';
+part of 'get_saved_passwords.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$cachedPasswordsBoxHash() =>
-    r'6888be0be534ed7989bf83169c27fd72d3305771';
+String _$getSavedPasswordsHash() => r'64919414757193c5b088388c8ecae7fe92732d6a';
 
-/// See also [cachedPasswordsBox].
-@ProviderFor(cachedPasswordsBox)
-final cachedPasswordsBoxProvider =
-    AutoDisposeFutureProvider<LazyBox<List<CacheablePassword>>>.internal(
-  cachedPasswordsBox,
-  name: r'cachedPasswordsBoxProvider',
+/// See also [getSavedPasswords].
+@ProviderFor(getSavedPasswords)
+final getSavedPasswordsProvider =
+    AutoDisposeProvider<GetSavedPasswords>.internal(
+  getSavedPasswords,
+  name: r'getSavedPasswordsProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$cachedPasswordsBoxHash,
+      : _$getSavedPasswordsHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef CachedPasswordsBoxRef
-    = AutoDisposeFutureProviderRef<LazyBox<List<CacheablePassword>>>;
+typedef GetSavedPasswordsRef = AutoDisposeProviderRef<GetSavedPasswords>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

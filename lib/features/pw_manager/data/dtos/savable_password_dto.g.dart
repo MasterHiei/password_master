@@ -1,31 +1,31 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cacheable_password_dto.dart';
+part of 'savable_password_dto.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class CacheablePasswordAdapter extends TypeAdapter<CacheablePassword> {
+class SavablePasswordDtoAdapter extends TypeAdapter<SavablePasswordDto> {
   @override
   final int typeId = 1;
 
   @override
-  CacheablePassword read(BinaryReader reader) {
+  SavablePasswordDto read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return CacheablePassword(
+    return SavablePasswordDto(
       name: fields[0] as String,
       value: fields[1] as String,
-      description: fields[2] == null ? '' : fields[2] as String,
+      description: fields[2] as String,
       sort: fields[3] as int,
     )..updatedAt = fields[4] as DateTime;
   }
 
   @override
-  void write(BinaryWriter writer, CacheablePassword obj) {
+  void write(BinaryWriter writer, SavablePasswordDto obj) {
     writer
       ..writeByte(5)
       ..writeByte(0)
@@ -46,7 +46,7 @@ class CacheablePasswordAdapter extends TypeAdapter<CacheablePassword> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is CacheablePasswordAdapter &&
+      other is SavablePasswordDtoAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

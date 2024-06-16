@@ -40,5 +40,13 @@
         "language": "言語"
       }
     }
+  },
+  "error": {
+    "app": {
+      "unexpectedError": "予期しないエラーが発生しました"
+    },
+    "value": {
+      "invalidPassword": "無効なパスワード"
+    }
   }
 }

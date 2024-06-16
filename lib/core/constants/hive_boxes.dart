@@ -1,5 +1,5 @@
 final class HiveBoxes {
   const HiveBoxes._();
 
-  static const String cachedPasswords = 'cached_passwords';
+  static const String savedPasswords = 'saved_passwords';
 }

@@ -7,7 +7,7 @@ part of 'pw_manager_local_data_source.dart';
 // **************************************************************************
 
 String _$pwManagerLocalDataSourceHash() =>
-    r'7a7f976ece6232662a92d7ac040aadcd8502f2f8';
+    r'6d7ed71a24f938b0bb4e9553bcece5590ad299cc';
 
 /// See also [pwManagerLocalDataSource].
 @ProviderFor(pwManagerLocalDataSource)

@@ -1,6 +1,9 @@
+import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../dtos/cacheable_password_dto.dart';
+import '../../../../core/constants/hive_boxes.dart';
+import '../../../../core/providers/saved_passwords_box_provider.dart';
+import '../dtos/savable_password_dto.dart';
 
 part 'pw_manager_local_data_source.g.dart';
 
@@ -8,22 +11,32 @@ part 'pw_manager_local_data_source.g.dart';
 PwManagerLocalDataSource pwManagerLocalDataSource(
   PwManagerLocalDataSourceRef ref,
 ) =>
-    const PwManagerLocalDataSourceImpl();
+    PwManagerLocalDataSourceImpl(
+      ref.watch(savedPasswordsBoxProvider),
+    );
 
 abstract class PwManagerLocalDataSource {
-  Future<void> save(CacheablePassword pw);
+  Future<List<SavablePasswordDto>?> getAll();
 
-  Future<void> delete(List<CacheablePassword> pws);
+  Future<void> save(SavablePasswordDto pw);
+
+  Future<void> delete(Iterable<SavablePasswordDto> pws);
 }
 
 final class PwManagerLocalDataSourceImpl implements PwManagerLocalDataSource {
-  const PwManagerLocalDataSourceImpl();
+  const PwManagerLocalDataSourceImpl(this.box);
+
+  final LazyBox<List<SavablePasswordDto>> box;
 
   @override
-  Future<void> save(CacheablePassword pw) => pw.save();
+  Future<List<SavablePasswordDto>?> getAll() =>
+      box.get(HiveBoxes.savedPasswords);
 
   @override
-  Future<void> delete(List<CacheablePassword> pws) async => Future.wait(
-        pws.map((CacheablePassword pw) async => pw.delete),
+  Future<void> save(SavablePasswordDto pw) => pw.save();
+
+  @override
+  Future<void> delete(Iterable<SavablePasswordDto> pws) async => Future.wait(
+        pws.map((SavablePasswordDto pw) async => pw.delete),
       );
 }

@@ -40,5 +40,13 @@
         "language": "语言"
       }
     }
+  },
+  "error": {
+    "app": {
+      "unexpectedError": "未知错误"
+    },
+    "value": {
+      "invalidPassword": "无效的密码"
+    }
   }
 }

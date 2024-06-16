@@ -40,5 +40,13 @@
         "language": "Language"
       }
     }
+  },
+  "error": {
+    "app": {
+      "unexpectedError": "Unexpected Error"
+    },
+    "value": {
+      "invalidPassword": "Invalid Password"
+    }
   }
 }

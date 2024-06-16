@@ -32,5 +32,10 @@ abstract class  LocaleKeys {
   static const pages_settings_common = 'pages.settings.common';
   static const pages_settings = 'pages.settings';
   static const pages = 'pages';
+  static const error_app_unexpectedError = 'error.app.unexpectedError';
+  static const error_app = 'error.app';
+  static const error_value_invalidPassword = 'error.value.invalidPassword';
+  static const error_value = 'error.value';
+  static const error = 'error';
 
 }

@@ -18,12 +18,12 @@ final _privateConstructorUsedError = UnsupportedError('It seems like you constru
 mixin _$ValueFailure<T> {
 
  T? get value => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( T? value)  invalidPassword,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( T? value)?  invalidPassword,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( T? value)?  invalidPassword,required TResult orElse(),}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _InvalidPassword<T> value)  invalidPassword,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _InvalidPassword<T> value)?  invalidPassword,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _InvalidPassword<T> value)?  invalidPassword,required TResult orElse(),}) => throw _privateConstructorUsedError;
+
+
+
+
+
+
 
 @JsonKey(ignore: true)
 $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith => throw _privateConstructorUsedError;
@@ -92,8 +92,8 @@ as T?,
 /// @nodoc
 
 
-class _$InvalidPasswordImpl<T>  implements _InvalidPassword<T> {
-  const _$InvalidPasswordImpl({this.value});
+class _$InvalidPasswordImpl<T> extends _InvalidPassword<T>  {
+  const _$InvalidPasswordImpl({this.value}): super._();
 
   
 
@@ -119,43 +119,19 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 @pragma('vm:prefer-inline')
 _$$InvalidPasswordImplCopyWith<T, _$InvalidPasswordImpl<T>> get copyWith => __$$InvalidPasswordImplCopyWithImpl<T, _$InvalidPasswordImpl<T>>(this, _$identity);
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( T? value)  invalidPassword,}) {
-  return invalidPassword(value);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( T? value)?  invalidPassword,}) {
-  return invalidPassword?.call(value);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( T? value)?  invalidPassword,required TResult orElse(),}) {
-  if (invalidPassword != null) {
-    return invalidPassword(value);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _InvalidPassword<T> value)  invalidPassword,}) {
-  return invalidPassword(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _InvalidPassword<T> value)?  invalidPassword,}) {
-  return invalidPassword?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _InvalidPassword<T> value)?  invalidPassword,required TResult orElse(),}) {
-  if (invalidPassword != null) {
-    return invalidPassword(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
 
-abstract class _InvalidPassword<T> implements ValueFailure<T> {
+abstract class _InvalidPassword<T> extends ValueFailure<T> {
   const factory _InvalidPassword({final  T? value}) = _$InvalidPasswordImpl<T>;
-  
+  const _InvalidPassword._(): super._();
 
   
 

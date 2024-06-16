@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../features/pw_manager/data/dtos/cacheable_password_dto.dart';
+import '../../../features/pw_manager/domain/entities/savable_password.dart';
 import '../../enums/pw_pattern.dart';
 
 part 'use_case_params.freezed.dart';
@@ -22,10 +22,10 @@ class UseCaseParams with _$UseCaseParams {
   ) = SavePwPatternsParams;
 
   const factory UseCaseParams.savePassword(
-    CacheablePassword value,
+    SavablePassword value,
   ) = SavePwParams;
 
   const factory UseCaseParams.deletePasswords(
-    List<CacheablePassword> values,
+    List<SavablePassword> values,
   ) = DeletePwsParams;
 }

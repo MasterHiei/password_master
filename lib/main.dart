@@ -1,15 +1,21 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constants/app_settings.dart';
+import 'core/constants/hive_boxes.dart';
+import 'core/constants/storage_keys.dart';
 import 'core/enums/i18n.dart';
 import 'core/providers/prefs_provider.dart';
-import 'features/pw_manager/data/dtos/cacheable_password_dto.dart';
+import 'features/pw_manager/data/dtos/savable_password_dto.dart';
 import 'password_master_app.dart';
 
 void main() async {
@@ -38,7 +44,17 @@ Future<void> _ensureInitialized() async {
   await EasyLocalization.ensureInitialized();
 
   await Hive.initFlutter();
-  Hive.registerAdapter(CacheablePasswordAdapter());
+  Hive.registerAdapter(SavablePasswordDtoAdapter());
+  await _openBoxes();
+}
+
+Future<void> _openBoxes() async {
+  await Hive.openLazyBox<List<SavablePasswordDto>>(
+    HiveBoxes.savedPasswords,
+    encryptionCipher: HiveAesCipher(
+      await _readEncryptionKey(StorageKeys.pwEncryptionKey),
+    ),
+  );
 }
 
 Future<List<Override>> _generateOverrides() async {
@@ -46,4 +62,19 @@ Future<List<Override>> _generateOverrides() async {
   return <Override>[
     prefsProvider.overrideWithValue(prefs),
   ];
+}
+
+Future<Uint8List> _readEncryptionKey(String storageKey) async {
+  const FlutterSecureStorage secureStorage = FlutterSecureStorage();
+
+  String? encryptionKey = await secureStorage.read(key: storageKey);
+  if (encryptionKey == null) {
+    final List<int> newKey = Hive.generateSecureKey();
+    await secureStorage.write(
+      key: storageKey,
+      value: base64UrlEncode(newKey),
+    );
+    encryptionKey = await secureStorage.read(key: storageKey);
+  }
+  return base64Url.decode(encryptionKey!);
 }

@@ -366,11 +366,11 @@ abstract class _$$SavePwParamsImplCopyWith<$Res>  {
   factory _$$SavePwParamsImplCopyWith(_$SavePwParamsImpl value, $Res Function(_$SavePwParamsImpl) then) = __$$SavePwParamsImplCopyWithImpl<$Res>;
 @useResult
 $Res call({
- CacheablePassword value
+ SavablePassword value
 });
 
 
-
+$SavablePasswordCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -382,11 +382,18 @@ class __$$SavePwParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithImpl
 @pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
   return _then(_$SavePwParamsImpl(
 null == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
-as CacheablePassword,
+as SavablePassword,
   ));
 }
 
-
+@override
+@pragma('vm:prefer-inline')
+$SavablePasswordCopyWith<$Res> get value {
+  
+  return $SavablePasswordCopyWith<$Res>(_value.value, (value) {
+    return _then(_value.copyWith(value: value) );
+  });
+}
 }
 
 /// @nodoc
@@ -397,7 +404,7 @@ class _$SavePwParamsImpl  implements SavePwParams {
 
   
 
-@override final  CacheablePassword value;
+@override final  SavablePassword value;
 
 @override
 String toString() {
@@ -430,12 +437,12 @@ _$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => __$$SavePwParams
 
 
 abstract class SavePwParams implements UseCaseParams {
-  const factory SavePwParams(final  CacheablePassword value) = _$SavePwParamsImpl;
+  const factory SavePwParams(final  SavablePassword value) = _$SavePwParamsImpl;
   
 
   
 
- CacheablePassword get value;
+ SavablePassword get value;
 @JsonKey(ignore: true)
 _$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
@@ -446,7 +453,7 @@ abstract class _$$DeletePwsParamsImplCopyWith<$Res>  {
   factory _$$DeletePwsParamsImplCopyWith(_$DeletePwsParamsImpl value, $Res Function(_$DeletePwsParamsImpl) then) = __$$DeletePwsParamsImplCopyWithImpl<$Res>;
 @useResult
 $Res call({
- List<CacheablePassword> values
+ List<SavablePassword> values
 });
 
 
@@ -462,7 +469,7 @@ class __$$DeletePwsParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithI
 @pragma('vm:prefer-inline') @override $Res call({Object? values = null,}) {
   return _then(_$DeletePwsParamsImpl(
 null == values ? _value._values : values // ignore: cast_nullable_to_non_nullable
-as List<CacheablePassword>,
+as List<SavablePassword>,
   ));
 }
 
@@ -473,12 +480,12 @@ as List<CacheablePassword>,
 
 
 class _$DeletePwsParamsImpl  implements DeletePwsParams {
-  const _$DeletePwsParamsImpl(final  List<CacheablePassword> values): _values = values;
+  const _$DeletePwsParamsImpl(final  List<SavablePassword> values): _values = values;
 
   
 
- final  List<CacheablePassword> _values;
-@override List<CacheablePassword> get values {
+ final  List<SavablePassword> _values;
+@override List<SavablePassword> get values {
   if (_values is EqualUnmodifiableListView) return _values;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_values);
@@ -516,12 +523,12 @@ _$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => __$$Delete
 
 
 abstract class DeletePwsParams implements UseCaseParams {
-  const factory DeletePwsParams(final  List<CacheablePassword> values) = _$DeletePwsParamsImpl;
+  const factory DeletePwsParams(final  List<SavablePassword> values) = _$DeletePwsParamsImpl;
   
 
   
 
- List<CacheablePassword> get values;
+ List<SavablePassword> get values;
 @JsonKey(ignore: true)
 _$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => throw _privateConstructorUsedError;
 

@@ -17,20 +17,26 @@ final _privateConstructorUsedError = UnsupportedError('It seems like you constru
 /// @nodoc
 mixin _$AppFailure {
 
+ Object get e => throw _privateConstructorUsedError;
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message)  localizedError,required TResult Function( Object e)  unexpectedError,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message)?  localizedError,TResult? Function( Object e)?  unexpectedError,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message)?  localizedError,TResult Function( Object e)?  unexpectedError,required TResult orElse(),}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _LocalizedError value)  localizedError,required TResult Function( _UnexpectedError value)  unexpectedError,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _LocalizedError value)?  localizedError,TResult? Function( _UnexpectedError value)?  unexpectedError,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _LocalizedError value)?  localizedError,TResult Function( _UnexpectedError value)?  unexpectedError,required TResult orElse(),}) => throw _privateConstructorUsedError;
 
+
+
+
+
+
+@JsonKey(ignore: true)
+$AppFailureCopyWith<AppFailure> get copyWith => throw _privateConstructorUsedError;
 
 }
 
 /// @nodoc
 abstract class $AppFailureCopyWith<$Res>  {
   factory $AppFailureCopyWith(AppFailure value, $Res Function(AppFailure) then) = _$AppFailureCopyWithImpl<$Res, AppFailure>;
+@useResult
+$Res call({
+ Object e
+});
 
 
 
@@ -45,119 +51,19 @@ class _$AppFailureCopyWithImpl<$Res,$Val extends AppFailure> implements $AppFail
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-
+@pragma('vm:prefer-inline') @override $Res call({Object? e = null,}) {
+  return _then(_value.copyWith(
+e: null == e ? _value.e : e ,
+  )as $Val);
+}
 
 }
 
 
 /// @nodoc
-abstract class _$$LocalizedErrorImplCopyWith<$Res>  {
-  factory _$$LocalizedErrorImplCopyWith(_$LocalizedErrorImpl value, $Res Function(_$LocalizedErrorImpl) then) = __$$LocalizedErrorImplCopyWithImpl<$Res>;
-@useResult
-$Res call({
- String message
-});
-
-
-
-}
-
-/// @nodoc
-class __$$LocalizedErrorImplCopyWithImpl<$Res> extends _$AppFailureCopyWithImpl<$Res, _$LocalizedErrorImpl> implements _$$LocalizedErrorImplCopyWith<$Res> {
-  __$$LocalizedErrorImplCopyWithImpl(_$LocalizedErrorImpl _value, $Res Function(_$LocalizedErrorImpl) _then)
-      : super(_value, _then);
-
-
-@pragma('vm:prefer-inline') @override $Res call({Object? message = null,}) {
-  return _then(_$LocalizedErrorImpl(
-null == message ? _value.message : message // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
-/// @nodoc
-
-
-class _$LocalizedErrorImpl  implements _LocalizedError {
-  const _$LocalizedErrorImpl(this.message);
-
-  
-
-@override final  String message;
-
-@override
-String toString() {
-  return 'AppFailure.localizedError(message: $message)';
-}
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$LocalizedErrorImpl&&(identical(other.message, message) || other.message == message));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,message);
-
-@JsonKey(ignore: true)
-@override
-@pragma('vm:prefer-inline')
-_$$LocalizedErrorImplCopyWith<_$LocalizedErrorImpl> get copyWith => __$$LocalizedErrorImplCopyWithImpl<_$LocalizedErrorImpl>(this, _$identity);
-
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message)  localizedError,required TResult Function( Object e)  unexpectedError,}) {
-  return localizedError(message);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message)?  localizedError,TResult? Function( Object e)?  unexpectedError,}) {
-  return localizedError?.call(message);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message)?  localizedError,TResult Function( Object e)?  unexpectedError,required TResult orElse(),}) {
-  if (localizedError != null) {
-    return localizedError(message);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _LocalizedError value)  localizedError,required TResult Function( _UnexpectedError value)  unexpectedError,}) {
-  return localizedError(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _LocalizedError value)?  localizedError,TResult? Function( _UnexpectedError value)?  unexpectedError,}) {
-  return localizedError?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _LocalizedError value)?  localizedError,TResult Function( _UnexpectedError value)?  unexpectedError,required TResult orElse(),}) {
-  if (localizedError != null) {
-    return localizedError(this);
-  }
-  return orElse();
-}
-
-}
-
-
-abstract class _LocalizedError implements AppFailure {
-  const factory _LocalizedError(final  String message) = _$LocalizedErrorImpl;
-  
-
-  
-
- String get message;
-@JsonKey(ignore: true)
-_$$LocalizedErrorImplCopyWith<_$LocalizedErrorImpl> get copyWith => throw _privateConstructorUsedError;
-
-}
-
-/// @nodoc
-abstract class _$$UnexpectedErrorImplCopyWith<$Res>  {
+abstract class _$$UnexpectedErrorImplCopyWith<$Res> implements $AppFailureCopyWith<$Res> {
   factory _$$UnexpectedErrorImplCopyWith(_$UnexpectedErrorImpl value, $Res Function(_$UnexpectedErrorImpl) then) = __$$UnexpectedErrorImplCopyWithImpl<$Res>;
-@useResult
+@override @useResult
 $Res call({
  Object e
 });
@@ -184,8 +90,8 @@ null == e ? _value.e : e ,
 /// @nodoc
 
 
-class _$UnexpectedErrorImpl  implements _UnexpectedError {
-  const _$UnexpectedErrorImpl(this.e);
+class _$UnexpectedErrorImpl extends _UnexpectedError  {
+  const _$UnexpectedErrorImpl(this.e): super._();
 
   
 
@@ -211,48 +117,24 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 @pragma('vm:prefer-inline')
 _$$UnexpectedErrorImplCopyWith<_$UnexpectedErrorImpl> get copyWith => __$$UnexpectedErrorImplCopyWithImpl<_$UnexpectedErrorImpl>(this, _$identity);
 
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message)  localizedError,required TResult Function( Object e)  unexpectedError,}) {
-  return unexpectedError(e);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message)?  localizedError,TResult? Function( Object e)?  unexpectedError,}) {
-  return unexpectedError?.call(e);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message)?  localizedError,TResult Function( Object e)?  unexpectedError,required TResult orElse(),}) {
-  if (unexpectedError != null) {
-    return unexpectedError(e);
-  }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _LocalizedError value)  localizedError,required TResult Function( _UnexpectedError value)  unexpectedError,}) {
-  return unexpectedError(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _LocalizedError value)?  localizedError,TResult? Function( _UnexpectedError value)?  unexpectedError,}) {
-  return unexpectedError?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _LocalizedError value)?  localizedError,TResult Function( _UnexpectedError value)?  unexpectedError,required TResult orElse(),}) {
-  if (unexpectedError != null) {
-    return unexpectedError(this);
-  }
-  return orElse();
-}
+
+
+
+
+
+
 
 }
 
 
-abstract class _UnexpectedError implements AppFailure {
+abstract class _UnexpectedError extends AppFailure {
   const factory _UnexpectedError(final  Object e) = _$UnexpectedErrorImpl;
-  
+  const _UnexpectedError._(): super._();
 
   
 
- Object get e;
-@JsonKey(ignore: true)
+@override  Object get e;
+@override @JsonKey(ignore: true)
 _$$UnexpectedErrorImplCopyWith<_$UnexpectedErrorImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
