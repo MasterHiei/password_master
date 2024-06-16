@@ -9,10 +9,6 @@
   "button": {
     "apply": "Apply"
   },
-  "drawer": {
-    "intro": "Introduction",
-    "settings": "Settings"
-  },
   "pages": {
     "generator": {
       "options": {
@@ -24,6 +20,12 @@
         "numbers": "Numbers",
         "symbols": "Symbols"
       }
+    },
+    "intro": {
+      "title": "Use Guide"
+    },
+    "manager": {
+      "title": "Password Manager"
     },
     "settings": {
       "title": "Settings",

@@ -8,9 +8,6 @@ abstract class  LocaleKeys {
   static const toast = 'toast';
   static const button_apply = 'button.apply';
   static const button = 'button';
-  static const drawer_intro = 'drawer.intro';
-  static const drawer_settings = 'drawer.settings';
-  static const drawer = 'drawer';
   static const pages_generator_options_title = 'pages.generator.options.title';
   static const pages_generator_options_quantity = 'pages.generator.options.quantity';
   static const pages_generator_options_length = 'pages.generator.options.length';
@@ -20,6 +17,10 @@ abstract class  LocaleKeys {
   static const pages_generator_options_symbols = 'pages.generator.options.symbols';
   static const pages_generator_options = 'pages.generator.options';
   static const pages_generator = 'pages.generator';
+  static const pages_intro_title = 'pages.intro.title';
+  static const pages_intro = 'pages.intro';
+  static const pages_manager_title = 'pages.manager.title';
+  static const pages_manager = 'pages.manager';
   static const pages_settings_title = 'pages.settings.title';
   static const pages_settings_common_title = 'pages.settings.common.title';
   static const pages_settings_common_theme_title = 'pages.settings.common.theme.title';

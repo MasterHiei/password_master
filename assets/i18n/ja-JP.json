@@ -9,10 +9,6 @@
   "button": {
     "apply": "適用"
   },
-  "drawer": {
-    "intro": "チュートリアル",
-    "settings": "設定"
-  },
   "pages": {
     "generator": {
       "options": {
@@ -24,6 +20,12 @@
         "numbers": "数字",
         "symbols": "記号"
       }
+    },
+    "intro": {
+      "title": "チュートリアル"
+    },
+    "manager": {
+      "title": "パスワードの管理"
     },
     "settings": {
       "title": "設定",

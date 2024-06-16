@@ -44,7 +44,7 @@ class LeftNavDrawer extends StatelessWidget {
     final List<Widget> items = <Widget>[
       _LeftNavDrawerItem(
         icon: Icons.school_outlined,
-        title: LocaleKeys.drawer_intro.tr(context: context),
+        title: LocaleKeys.pages_intro_title.tr(context: context),
         onTap: () => AppToast.show('Coming soon!'),
       ),
       const Divider(
@@ -53,8 +53,13 @@ class LeftNavDrawer extends StatelessWidget {
         endIndent: _horizontalPadding,
       ),
       _LeftNavDrawerItem(
+        icon: Icons.lock_outline,
+        title: LocaleKeys.pages_manager_title.tr(context: context),
+        route: const PwManagerRoute(),
+      ),
+      _LeftNavDrawerItem(
         icon: Icons.settings_outlined,
-        title: LocaleKeys.drawer_settings.tr(context: context),
+        title: LocaleKeys.pages_settings_title.tr(context: context),
         route: const SettingsRoute(),
       ),
     ];

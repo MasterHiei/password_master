@@ -3,6 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../features/pw_generator/presentation/pages/generator_options_page.dart';
 import '../../features/pw_generator/presentation/pages/pw_generator_page.dart';
+import '../../features/pw_manager/presentation/pages/pw_manager_page.dart';
 import '../../features/settings/presentation/pages/localization_settings_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 import '../../features/settings/presentation/pages/theme_settings_page.dart';
@@ -27,6 +28,10 @@ class AppRouter extends _$AppRouter {
           type: const CustomRouteType(
             transitionsBuilder: TransitionsBuilders.slideLeft,
           ),
+        ),
+        AutoRoute(
+          path: '/manager',
+          page: PwManagerRoute.page,
         ),
         AutoRoute(
           path: '/settings',

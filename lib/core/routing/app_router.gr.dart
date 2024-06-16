@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const PwGeneratorPage(),
       );
     },
+    PwManagerRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PwManagerPage(),
+      );
+    },
     SettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -86,6 +92,20 @@ class PwGeneratorRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'PwGeneratorRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PwManagerPage]
+class PwManagerRoute extends PageRouteInfo<void> {
+  const PwManagerRoute({List<PageRouteInfo>? children})
+      : super(
+          PwManagerRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PwManagerRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
