@@ -9,51 +9,6 @@
 
 part of 'app_router.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
-  // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, PageFactory> pagesMap = {
-    GeneratorOptionsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const GeneratorOptionsPage(),
-      );
-    },
-    LocalizationSettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: WrappedRoute(child: const LocalizationSettingsPage()),
-      );
-    },
-    PwGeneratorRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const PwGeneratorPage(),
-      );
-    },
-    PwManagerRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const PwManagerPage(),
-      );
-    },
-    SettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SettingsPage(),
-      );
-    },
-    ThemeSettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: WrappedRoute(child: const ThemeSettingsPage()),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [GeneratorOptionsPage]
 class GeneratorOptionsRoute extends PageRouteInfo<void> {
@@ -65,7 +20,12 @@ class GeneratorOptionsRoute extends PageRouteInfo<void> {
 
   static const String name = 'GeneratorOptionsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const GeneratorOptionsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -79,7 +39,12 @@ class LocalizationSettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'LocalizationSettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return WrappedRoute(child: const LocalizationSettingsPage());
+    },
+  );
 }
 
 /// generated route for
@@ -93,7 +58,12 @@ class PwGeneratorRoute extends PageRouteInfo<void> {
 
   static const String name = 'PwGeneratorRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PwGeneratorPage();
+    },
+  );
 }
 
 /// generated route for
@@ -107,7 +77,12 @@ class PwManagerRoute extends PageRouteInfo<void> {
 
   static const String name = 'PwManagerRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PwManagerPage();
+    },
+  );
 }
 
 /// generated route for
@@ -121,7 +96,12 @@ class SettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'SettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -135,5 +115,10 @@ class ThemeSettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'ThemeSettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return WrappedRoute(child: const ThemeSettingsPage());
+    },
+  );
 }

@@ -15,7 +15,7 @@ part 'app_router.gr.dart';
 Raw<AppRouter> router(RouterRef ref) => AppRouter();
 
 @AutoRouterConfig()
-class AppRouter extends _$AppRouter {
+class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => <AutoRoute>[
         AutoRoute(
