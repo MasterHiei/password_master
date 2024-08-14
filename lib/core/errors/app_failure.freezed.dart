@@ -25,7 +25,9 @@ mixin _$AppFailure {
 
 
 
-@JsonKey(ignore: true)
+/// Create a copy of AppFailure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 $AppFailureCopyWith<AppFailure> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -51,6 +53,8 @@ class _$AppFailureCopyWithImpl<$Res,$Val extends AppFailure> implements $AppFail
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+/// Create a copy of AppFailure
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? e = null,}) {
   return _then(_value.copyWith(
 e: null == e ? _value.e : e ,
@@ -78,6 +82,8 @@ class __$$UnexpectedErrorImplCopyWithImpl<$Res> extends _$AppFailureCopyWithImpl
       : super(_value, _then);
 
 
+/// Create a copy of AppFailure
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? e = null,}) {
   return _then(_$UnexpectedErrorImpl(
 null == e ? _value.e : e ,
@@ -112,7 +118,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(e));
 
-@JsonKey(ignore: true)
+/// Create a copy of AppFailure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$UnexpectedErrorImplCopyWith<_$UnexpectedErrorImpl> get copyWith => __$$UnexpectedErrorImplCopyWithImpl<_$UnexpectedErrorImpl>(this, _$identity);
@@ -133,8 +141,10 @@ abstract class _UnexpectedError extends AppFailure {
 
   
 
-@override  Object get e;
-@override @JsonKey(ignore: true)
+@override Object get e;
+/// Create a copy of AppFailure
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
 _$$UnexpectedErrorImplCopyWith<_$UnexpectedErrorImpl> get copyWith => throw _privateConstructorUsedError;
 
 }

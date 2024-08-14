@@ -45,6 +45,8 @@ class _$UseCaseParamsCopyWithImpl<$Res,$Val extends UseCaseParams> implements $U
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 
 
 }
@@ -64,6 +66,8 @@ class __$$NoParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithImpl<$Re
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 
 
 
@@ -133,6 +137,8 @@ class __$$SavePwQuantityParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopy
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
   return _then(_$SavePwQuantityParamsImpl(
 null == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
@@ -168,7 +174,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,value);
 
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$SavePwQuantityParamsImplCopyWith<_$SavePwQuantityParamsImpl> get copyWith => __$$SavePwQuantityParamsImplCopyWithImpl<_$SavePwQuantityParamsImpl>(this, _$identity);
@@ -190,7 +198,9 @@ abstract class SavePwQuantityParams implements UseCaseParams {
   
 
  int get value;
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 _$$SavePwQuantityParamsImplCopyWith<_$SavePwQuantityParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -213,6 +223,8 @@ class __$$SavePwLengthParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWi
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
   return _then(_$SavePwLengthParamsImpl(
 null == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
@@ -248,7 +260,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,value);
 
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$SavePwLengthParamsImplCopyWith<_$SavePwLengthParamsImpl> get copyWith => __$$SavePwLengthParamsImplCopyWithImpl<_$SavePwLengthParamsImpl>(this, _$identity);
@@ -270,7 +284,9 @@ abstract class SavePwLengthParams implements UseCaseParams {
   
 
  int get value;
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 _$$SavePwLengthParamsImplCopyWith<_$SavePwLengthParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -293,6 +309,8 @@ class __$$SavePwPatternsParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopy
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
   return _then(_$SavePwPatternsParamsImpl(
 null == value ? _value._value : value // ignore: cast_nullable_to_non_nullable
@@ -334,7 +352,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_value));
 
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$SavePwPatternsParamsImplCopyWith<_$SavePwPatternsParamsImpl> get copyWith => __$$SavePwPatternsParamsImplCopyWithImpl<_$SavePwPatternsParamsImpl>(this, _$identity);
@@ -356,7 +376,9 @@ abstract class SavePwPatternsParams implements UseCaseParams {
   
 
  List<PwPattern> get value;
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 _$$SavePwPatternsParamsImplCopyWith<_$SavePwPatternsParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -379,6 +401,8 @@ class __$$SavePwParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithImpl
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = null,}) {
   return _then(_$SavePwParamsImpl(
 null == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
@@ -386,6 +410,8 @@ as SavablePassword,
   ));
 }
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
 $SavablePasswordCopyWith<$Res> get value {
@@ -421,7 +447,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,value);
 
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => __$$SavePwParamsImplCopyWithImpl<_$SavePwParamsImpl>(this, _$identity);
@@ -443,7 +471,9 @@ abstract class SavePwParams implements UseCaseParams {
   
 
  SavablePassword get value;
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 _$$SavePwParamsImplCopyWith<_$SavePwParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -466,6 +496,8 @@ class __$$DeletePwsParamsImplCopyWithImpl<$Res> extends _$UseCaseParamsCopyWithI
       : super(_value, _then);
 
 
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? values = null,}) {
   return _then(_$DeletePwsParamsImpl(
 null == values ? _value._values : values // ignore: cast_nullable_to_non_nullable
@@ -507,7 +539,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_values));
 
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => __$$DeletePwsParamsImplCopyWithImpl<_$DeletePwsParamsImpl>(this, _$identity);
@@ -529,7 +563,9 @@ abstract class DeletePwsParams implements UseCaseParams {
   
 
  List<SavablePassword> get values;
-@JsonKey(ignore: true)
+/// Create a copy of UseCaseParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 _$$DeletePwsParamsImplCopyWith<_$DeletePwsParamsImpl> get copyWith => throw _privateConstructorUsedError;
 
 }

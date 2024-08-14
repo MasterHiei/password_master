@@ -25,7 +25,9 @@ mixin _$SavablePassword {
 
 
 
-@JsonKey(ignore: true)
+/// Create a copy of SavablePassword
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 $SavablePasswordCopyWith<SavablePassword> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -51,6 +53,8 @@ class _$SavablePasswordCopyWithImpl<$Res,$Val extends SavablePassword> implement
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+/// Create a copy of SavablePassword
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? value = null,Object? description = null,Object? sort = null,Object? updatedAt = null,}) {
   return _then(_value.copyWith(
 name: null == name ? _value.name : name // ignore: cast_nullable_to_non_nullable
@@ -83,6 +87,8 @@ class __$$SavablePasswordImplCopyWithImpl<$Res> extends _$SavablePasswordCopyWit
       : super(_value, _then);
 
 
+/// Create a copy of SavablePassword
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? value = null,Object? description = null,Object? sort = null,Object? updatedAt = null,}) {
   return _then(_$SavablePasswordImpl(
 name: null == name ? _value.name : name // ignore: cast_nullable_to_non_nullable
@@ -126,7 +132,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,name,value,description,sort,updatedAt);
 
-@JsonKey(ignore: true)
+/// Create a copy of SavablePassword
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$SavablePasswordImplCopyWith<_$SavablePasswordImpl> get copyWith => __$$SavablePasswordImplCopyWithImpl<_$SavablePasswordImpl>(this, _$identity);
@@ -147,8 +155,10 @@ abstract class _SavablePassword implements SavablePassword {
 
   
 
-@override  String get name;@override  String get value;@override  String get description;@override  int get sort;@override  DateTime get updatedAt;
-@override @JsonKey(ignore: true)
+@override String get name;@override String get value;@override String get description;@override int get sort;@override DateTime get updatedAt;
+/// Create a copy of SavablePassword
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
 _$$SavablePasswordImplCopyWith<_$SavablePasswordImpl> get copyWith => throw _privateConstructorUsedError;
 
 }

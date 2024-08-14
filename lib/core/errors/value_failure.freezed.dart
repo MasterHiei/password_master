@@ -25,7 +25,9 @@ mixin _$ValueFailure<T> {
 
 
 
-@JsonKey(ignore: true)
+/// Create a copy of ValueFailure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -51,6 +53,8 @@ class _$ValueFailureCopyWithImpl<T,$Res,$Val extends ValueFailure<T>> implements
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+/// Create a copy of ValueFailure
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = freezed,}) {
   return _then(_value.copyWith(
 value: freezed == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
@@ -79,6 +83,8 @@ class __$$InvalidPasswordImplCopyWithImpl<T,$Res> extends _$ValueFailureCopyWith
       : super(_value, _then);
 
 
+/// Create a copy of ValueFailure
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? value = freezed,}) {
   return _then(_$InvalidPasswordImpl<T>(
 value: freezed == value ? _value.value : value // ignore: cast_nullable_to_non_nullable
@@ -114,7 +120,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(value));
 
-@JsonKey(ignore: true)
+/// Create a copy of ValueFailure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$InvalidPasswordImplCopyWith<T, _$InvalidPasswordImpl<T>> get copyWith => __$$InvalidPasswordImplCopyWithImpl<T, _$InvalidPasswordImpl<T>>(this, _$identity);
@@ -135,8 +143,10 @@ abstract class _InvalidPassword<T> extends ValueFailure<T> {
 
   
 
-@override  T? get value;
-@override @JsonKey(ignore: true)
+@override T? get value;
+/// Create a copy of ValueFailure
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
 _$$InvalidPasswordImplCopyWith<T, _$InvalidPasswordImpl<T>> get copyWith => throw _privateConstructorUsedError;
 
 }

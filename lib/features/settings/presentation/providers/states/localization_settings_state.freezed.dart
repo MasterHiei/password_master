@@ -25,7 +25,9 @@ mixin _$LocalizationSettingsState {
 
 
 
-@JsonKey(ignore: true)
+/// Create a copy of LocalizationSettingsState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 $LocalizationSettingsStateCopyWith<LocalizationSettingsState> get copyWith => throw _privateConstructorUsedError;
 
 }
@@ -51,6 +53,8 @@ class _$LocalizationSettingsStateCopyWithImpl<$Res,$Val extends LocalizationSett
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+/// Create a copy of LocalizationSettingsState
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? initialValue = null,Object? currentValue = null,}) {
   return _then(_value.copyWith(
 initialValue: null == initialValue ? _value.initialValue : initialValue // ignore: cast_nullable_to_non_nullable
@@ -80,6 +84,8 @@ class __$$LocalizationSettingsStateImplCopyWithImpl<$Res> extends _$Localization
       : super(_value, _then);
 
 
+/// Create a copy of LocalizationSettingsState
+/// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? initialValue = null,Object? currentValue = null,}) {
   return _then(_$LocalizationSettingsStateImpl(
 initialValue: null == initialValue ? _value.initialValue : initialValue // ignore: cast_nullable_to_non_nullable
@@ -117,7 +123,9 @@ bool operator ==(Object other) {
 @override
 int get hashCode => Object.hash(runtimeType,initialValue,currentValue);
 
-@JsonKey(ignore: true)
+/// Create a copy of LocalizationSettingsState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 @pragma('vm:prefer-inline')
 _$$LocalizationSettingsStateImplCopyWith<_$LocalizationSettingsStateImpl> get copyWith => __$$LocalizationSettingsStateImplCopyWithImpl<_$LocalizationSettingsStateImpl>(this, _$identity);
@@ -138,8 +146,10 @@ abstract class _LocalizationSettingsState extends LocalizationSettingsState {
 
   
 
-@override  I18n get initialValue;@override  I18n get currentValue;
-@override @JsonKey(ignore: true)
+@override I18n get initialValue;@override I18n get currentValue;
+/// Create a copy of LocalizationSettingsState
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
 _$$LocalizationSettingsStateImplCopyWith<_$LocalizationSettingsStateImpl> get copyWith => throw _privateConstructorUsedError;
 
 }
