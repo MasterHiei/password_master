@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -10,7 +11,7 @@ import '../repositories/pw_generator_repository.dart';
 part 'get_pw_length.g.dart';
 
 @riverpod
-GetPwLength getPwLength(GetPwLengthRef ref) => GetPwLength(
+GetPwLength getPwLength(Ref ref) => GetPwLength(
       ref.watch(pwGeneratorRepositoryProvider),
     );
 

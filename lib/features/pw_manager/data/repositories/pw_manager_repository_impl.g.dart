@@ -7,7 +7,7 @@ part of 'pw_manager_repository_impl.dart';
 // **************************************************************************
 
 String _$pwManagerRepositoryHash() =>
-    r'a4d7f63983e88b06f9e253eda09919000b19962f';
+    r'9a727e354fda2cf4079c6306c7a279c42a579e8e';
 
 /// See also [pwManagerRepository].
 @ProviderFor(pwManagerRepository)
@@ -22,6 +22,8 @@ final pwManagerRepositoryProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PwManagerRepositoryRef = AutoDisposeProviderRef<PwManagerRepository>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

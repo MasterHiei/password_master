@@ -6,7 +6,7 @@ part of 'save_pw_patterns.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$savePwPatternsHash() => r'aa7e25b91cd719b6d077a413843d814085e90658';
+String _$savePwPatternsHash() => r'012ed1314470341d7ce1c5d0fbab408aed2cd44b';
 
 /// See also [savePwPatterns].
 @ProviderFor(savePwPatterns)
@@ -20,6 +20,8 @@ final savePwPatternsProvider = AutoDisposeProvider<SavePwPatterns>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SavePwPatternsRef = AutoDisposeProviderRef<SavePwPatterns>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

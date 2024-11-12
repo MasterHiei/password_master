@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -12,10 +13,7 @@ import '../dtos/savable_password_dto.dart';
 part 'pw_manager_repository_impl.g.dart';
 
 @riverpod
-PwManagerRepository pwManagerRepository(
-  PwManagerRepositoryRef ref,
-) =>
-    PwManagerRepositoryImpl(
+PwManagerRepository pwManagerRepository(Ref ref) => PwManagerRepositoryImpl(
       ref.watch(pwManagerLocalDataSourceProvider),
     );
 

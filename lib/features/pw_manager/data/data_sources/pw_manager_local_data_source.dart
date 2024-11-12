@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -8,9 +9,7 @@ import '../dtos/savable_password_dto.dart';
 part 'pw_manager_local_data_source.g.dart';
 
 @riverpod
-PwManagerLocalDataSource pwManagerLocalDataSource(
-  PwManagerLocalDataSourceRef ref,
-) =>
+PwManagerLocalDataSource pwManagerLocalDataSource(Ref ref) =>
     PwManagerLocalDataSourceImpl(
       ref.watch(savedPasswordsBoxProvider),
     );

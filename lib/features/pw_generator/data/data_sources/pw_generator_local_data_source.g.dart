@@ -7,7 +7,7 @@ part of 'pw_generator_local_data_source.dart';
 // **************************************************************************
 
 String _$pwGeneratorLocalDataSourceHash() =>
-    r'b5d7875a454647b08c7429591d23d3daa5cd6ab4';
+    r'9fc2496438e35ce075f4f0fc2d3821b5bcd3a1ec';
 
 /// See also [pwGeneratorLocalDataSource].
 @ProviderFor(pwGeneratorLocalDataSource)
@@ -22,7 +22,9 @@ final pwGeneratorLocalDataSourceProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PwGeneratorLocalDataSourceRef
     = AutoDisposeProviderRef<PwGeneratorLocalDataSource>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

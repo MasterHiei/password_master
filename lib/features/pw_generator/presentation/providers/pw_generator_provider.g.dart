@@ -6,7 +6,7 @@ part of 'pw_generator_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$pwGeneratorHash() => r'ef9f8b7d8aa86aac4c214855f6c367afbc7c61b8';
+String _$pwGeneratorHash() => r'3e170af21d785cf289ee1ab955d50cf103585e71';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -142,6 +142,8 @@ class PwGeneratorProvider extends AutoDisposeProvider<List<String>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin PwGeneratorRef on AutoDisposeProviderRef<List<String>> {
   /// The parameter `seed` of this provider.
   int? get seed;
@@ -155,4 +157,4 @@ class _PwGeneratorProviderElement
   int? get seed => (origin as PwGeneratorProvider).seed;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

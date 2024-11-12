@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -10,7 +11,7 @@ import '../repositories/pw_generator_repository.dart';
 part 'save_pw_quantity.g.dart';
 
 @riverpod
-SavePwQuantity savePwQuantity(SavePwQuantityRef ref) => SavePwQuantity(
+SavePwQuantity savePwQuantity(Ref ref) => SavePwQuantity(
       ref.watch(pwGeneratorRepositoryProvider),
     );
 

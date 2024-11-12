@@ -6,7 +6,7 @@ part of 'localization_settings_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$defaultLocaleHash() => r'4fb32dd11b86a20032ed17debe061664d046c73e';
+String _$defaultLocaleHash() => r'9b2177ce60c76704420d97d341a5235485445541';
 
 /// See also [defaultLocale].
 @ProviderFor(defaultLocale)
@@ -20,6 +20,8 @@ final defaultLocaleProvider = AutoDisposeProvider<Locale>.internal(
   allTransitiveDependencies: const <ProviderOrFamily>{},
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef DefaultLocaleRef = AutoDisposeProviderRef<Locale>;
 String _$localizationSettingsHash() =>
     r'6eca995f2ca5c9297673af6bf3644bcab400d74b';
@@ -42,4 +44,4 @@ final localizationSettingsProvider = AutoDisposeNotifierProvider<
 
 typedef _$LocalizationSettings = AutoDisposeNotifier<LocalizationSettingsState>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

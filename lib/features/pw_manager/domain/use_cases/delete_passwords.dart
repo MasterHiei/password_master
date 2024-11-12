@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -10,7 +11,7 @@ import '../repositories/pw_manager_repository.dart';
 part 'delete_passwords.g.dart';
 
 @riverpod
-DeletePasswords deletePasswords(DeletePasswordsRef ref) => DeletePasswords(
+DeletePasswords deletePasswords(Ref ref) => DeletePasswords(
       ref.watch(pwManagerRepositoryProvider),
     );
 

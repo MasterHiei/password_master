@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -12,9 +13,7 @@ import '../data_sources/pw_generator_local_data_source.dart';
 part 'pw_generator_repository_impl.g.dart';
 
 @riverpod
-PwGeneratorRepository pwGeneratorRepository(
-  PwGeneratorRepositoryRef ref,
-) =>
+PwGeneratorRepository pwGeneratorRepository(Ref ref) =>
     PwGeneratorRepositoryImpl(
       ref.watch(pwGeneratorLocalDataSourceProvider),
     );

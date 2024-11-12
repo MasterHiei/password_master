@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -7,9 +8,7 @@ import '../../../../core/providers/prefs_provider.dart';
 part 'pw_generator_local_data_source.g.dart';
 
 @riverpod
-PwGeneratorLocalDataSource pwGeneratorLocalDataSource(
-  PwGeneratorLocalDataSourceRef ref,
-) =>
+PwGeneratorLocalDataSource pwGeneratorLocalDataSource(Ref ref) =>
     PwGeneratorLocalDataSourceImpl(
       ref.watch(prefsProvider),
     );

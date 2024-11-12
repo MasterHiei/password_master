@@ -7,7 +7,7 @@ part of 'pw_generator_repository_impl.dart';
 // **************************************************************************
 
 String _$pwGeneratorRepositoryHash() =>
-    r'd03e21df5557284b97534213e2697f86b80f62b9';
+    r'48dc7551058963e7a9ca6ab8abc3e87e4db19c8b';
 
 /// See also [pwGeneratorRepository].
 @ProviderFor(pwGeneratorRepository)
@@ -22,7 +22,9 @@ final pwGeneratorRepositoryProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef PwGeneratorRepositoryRef
     = AutoDisposeProviderRef<PwGeneratorRepository>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../features/pw_generator/presentation/pages/generator_options_page.dart';
@@ -12,7 +13,7 @@ part 'app_router.g.dart';
 part 'app_router.gr.dart';
 
 @Riverpod(keepAlive: true)
-Raw<AppRouter> router(RouterRef ref) => AppRouter();
+Raw<AppRouter> router(Ref ref) => AppRouter();
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {

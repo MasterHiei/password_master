@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -10,7 +11,7 @@ import '../repositories/pw_manager_repository.dart';
 part 'save_password.g.dart';
 
 @riverpod
-SavePassword savePassword(SavePasswordRef ref) => SavePassword(
+SavePassword savePassword(Ref ref) => SavePassword(
       ref.watch(pwManagerRepositoryProvider),
     );
 
