@@ -20,7 +20,7 @@ class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: title,
       actions: <Widget>[
-        if (kDebugMode) _buildTalkerScreenButton(context),
+        if (kDebugMode) _buildAppLogsButton(context),
         ...actions,
       ],
       bottom: bottom,
@@ -33,7 +33,7 @@ class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Size.fromHeight(kToolbarHeight + bottomHeight);
   }
 
-  Widget _buildTalkerScreenButton(BuildContext context) => IconButton(
+  Widget _buildAppLogsButton(BuildContext context) => IconButton(
         onPressed: () => const LogsRoute().push<void>(context),
         icon: const Icon(Icons.monitor_heart_outlined),
       );
