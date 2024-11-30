@@ -10,7 +10,7 @@ mixin RepositoryErrorHandlerMixin {
       IOEither<AppFailure, T>.tryCatch(
         run,
         (Object error, StackTrace stackTrace) {
-          logger.e(error, error: error, stackTrace: stackTrace);
+          talker.error(error, (error: error, stackTrace: stackTrace));
           return switch (error) {
             AppFailure() => error,
             _ => AppFailure.unexpectedError(error),
@@ -24,7 +24,7 @@ mixin RepositoryErrorHandlerMixin {
       TaskEither<AppFailure, T>.tryCatch(
         run,
         (Object error, StackTrace stackTrace) {
-          logger.e(error, error: error, stackTrace: stackTrace);
+          talker.error(error, (error: error, stackTrace: stackTrace));
           return switch (error) {
             AppFailure() => error,
             _ => AppFailure.unexpectedError(error),

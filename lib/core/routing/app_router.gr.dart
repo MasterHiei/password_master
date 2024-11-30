@@ -48,6 +48,25 @@ class LocalizationSettingsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [LogsPage]
+class LogsRoute extends PageRouteInfo<void> {
+  const LogsRoute({List<PageRouteInfo>? children})
+      : super(
+          LogsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LogsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const LogsPage();
+    },
+  );
+}
+
+/// generated route for
 /// [PwGeneratorPage]
 class PwGeneratorRoute extends PageRouteInfo<void> {
   const PwGeneratorRoute({List<PageRouteInfo>? children})

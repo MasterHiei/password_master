@@ -9,12 +9,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:talker_riverpod_logger/talker_riverpod_logger.dart';
 
 import 'core/constants/app_settings.dart';
 import 'core/constants/hive_boxes.dart';
 import 'core/constants/storage_keys.dart';
 import 'core/enums/i18n.dart';
 import 'core/providers/prefs_provider.dart';
+import 'core/utils/logger.dart';
 import 'features/pw_manager/data/dtos/savable_password_dto.dart';
 import 'password_master_app.dart';
 
@@ -25,6 +27,7 @@ void main() async {
   runApp(
     ProviderScope(
       overrides: await _generateOverrides(),
+      observers: _observers,
       child: ScreenUtilInit(
         builder: (_, __) => EasyLocalization(
           supportedLocales: I18n.locales,
@@ -63,6 +66,15 @@ Future<List<Override>> _generateOverrides() async {
     prefsProvider.overrideWithValue(prefs),
   ];
 }
+
+List<ProviderObserver> get _observers => <ProviderObserver>[
+      TalkerRiverpodObserver(
+        talker: talker,
+        settings: const TalkerRiverpodLoggerSettings(
+          printProviderDisposed: true,
+        ),
+      ),
+    ];
 
 Future<Uint8List> _readEncryptionKey(String storageKey) async {
   const FlutterSecureStorage secureStorage = FlutterSecureStorage();
