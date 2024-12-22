@@ -27,14 +27,14 @@ dependencies:
   hive_flutter: 1.1.0
   json_annotation: 4.9.0
   riverpod_annotation: 2.6.1
-  shared_preferences: 2.3.3
+  shared_preferences: 2.3.4
   talker_dio_logger: 4.5.2
   talker_flutter: 4.5.2
   talker_riverpod_logger: 4.5.2
 
 dev_dependencies:
   auto_route_generator: 9.0.0
-  build_runner: 2.4.13
+  build_runner: 2.4.14
   custom_lint: 0.7.0
   flutter_gen_runner: 5.8.0
   flutter_lints: 5.0.0
