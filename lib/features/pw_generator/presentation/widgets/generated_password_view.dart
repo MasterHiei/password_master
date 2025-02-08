@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/gen/locale_keys.g.dart';
 import '../../../../core/widgets/app_toast.dart';
-import '../../../../generated/locale_keys.g.dart';
-import '../providers/pw_generator_provider.dart';
+import '../providers/pw_generator.provider.dart';
 
 class GeneratedPasswordView extends ConsumerWidget {
   const GeneratedPasswordView({super.key});

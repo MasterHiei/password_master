@@ -4,8 +4,7 @@ import 'package:flutter/cupertino.dart';
 enum I18n {
   en(Locale('en', 'US'), localizedName: 'English'),
   zh(Locale('zh', 'CN'), localizedName: '简体中文'),
-  ja(Locale('ja', 'JP'), localizedName: '日本語'),
-  ;
+  ja(Locale('ja', 'JP'), localizedName: '日本語');
 
   const I18n(this.locale, {required this.localizedName});
 

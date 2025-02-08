@@ -6,8 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 import 'core/enums/i18n.dart';
-import 'core/routing/app_router.dart';
-import 'core/theme/app_theme.dart';
+import 'core/extension_types/app_theme.dart';
+import 'core/routing/app.router.dart';
 import 'core/utils/logger.dart';
 
 class PasswordMasterApp extends ConsumerWidget {

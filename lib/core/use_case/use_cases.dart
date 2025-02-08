@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../errors/app_failure.dart';
+import '../errors/app.failure.dart';
 
 abstract class IOUseCase<Value, Params> {
   IOEither<AppFailure, Value> call(Params params);

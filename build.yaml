@@ -1,6 +1,26 @@
 targets:
   $default:
     builders:
+      auto_route_generator:
+        generate_for:
+          include:
+            - lib/**/*.router.dart
+            - lib/**/*.page.dart
       freezed:
         options:
           format: false
+        generate_for:
+          include:
+            - lib/**/*.dto.dart
+            - lib/**/*.entity.dart
+            - lib/**/*.state.dart
+            - lib/**/*.params.dart
+      riverpod_generator:
+        generate_for:
+          include:
+            - lib/**/*.router.dart
+            - lib/**/*.local.ds.dart
+            - lib/**/*.remote.ds.dart
+            - lib/**/*.repo.impl.dart
+            - lib/**/*.uc.dart
+            - lib/**/*.provider.dart

@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../generated/locale_keys.g.dart';
-import '../providers/localization_settings_provider.dart';
+import '../../../../core/gen/locale_keys.g.dart';
+import '../providers/localization_settings.provider.dart';
 
 class ApplyLocalizationSettingsButton extends ConsumerWidget {
   const ApplyLocalizationSettingsButton({super.key});
